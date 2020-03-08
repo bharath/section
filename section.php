@@ -1,11 +1,14 @@
 <?php
 /**
- * Plugin Name:     Section Block
- * Description:     Section Block for Gutenberg
+ * Plugin Name:     Section
+ * Description:     A Section Block for Gutenberg
  * Version:         0.1.0
- * Author:          The WordPress Contributors
+ * Author:          Bharath
  * License:         GPL-2.0-or-later
  * Text Domain:     oleti
+ *
+ * Plugin URI: https://github.com/bharath/section
+ * Author URI: https://bharath.dev
  *
  * @package         oleti
  */
@@ -32,6 +35,12 @@ function oleti_section_block_init() {
 		plugins_url( $index_js, __FILE__ ),
 		$script_asset['dependencies'],
 		$script_asset['version']
+	);
+
+	wp_set_script_translations(
+		'oleti-section-block-editor',
+		'oleti',
+		plugin_dir_path( __FILE__ ) . 'languages'
 	);
 
 	$editor_css = 'editor.css';
