@@ -37,6 +37,10 @@ const deprecated = [
 				type: 'string',
 				default: 'px',
 			},
+			tagName: {
+				type: 'string',
+				default: 'section',
+			},
 		},
 
 		supports: {
@@ -51,7 +55,10 @@ const deprecated = [
 				customBackgroundColor,
 				textColor,
 				customTextColor,
+				tagName,
 			} = attributes;
+
+			const CustomTagname = `${ tagName }`;
 
 			const backgroundClass = getColorClassName(
 				'background-color',
@@ -81,11 +88,11 @@ const deprecated = [
 			};
 
 			return (
-				<div className={ classes } style={ styles }>
+				<CustomTagname className={ classes } style={ styles }>
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks.Content />
 					</div>
-				</div>
+				</CustomTagname>
 			);
 		},
 	},

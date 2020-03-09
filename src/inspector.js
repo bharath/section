@@ -20,6 +20,7 @@ import {
 	PanelBody,
 	withFallbackStyles,
 	__experimentalDimensionControl as DimensionControl,
+	SelectControl,
 } from '@wordpress/components';
 
 const { getComputedStyle } = window;
@@ -52,6 +53,8 @@ class Inspector extends Component {
 			attributes,
 			setAttributes,
 		} = this.props;
+
+		const { tagName } = attributes;
 
 		const updateSpacing = ( size, dimensionAttr ) => {
 			setAttributes( {
@@ -117,6 +120,42 @@ class Inspector extends Component {
 							} }
 						/>
 					</PanelColorSettings>
+					<PanelBody title={ __( 'Layout', 'oleti' ) }>
+						<SelectControl
+							label={ __( 'HTML Tag', 'oleti' ) }
+							value={ tagName }
+							onChange={ ( value ) =>
+								setAttributes( {
+									tagName: value,
+								} )
+							}
+							options={ [
+								{
+									value: 'article',
+									label: __( 'article', 'oleti' ),
+								},
+								{
+									value: 'aside',
+									label: __( 'aside', 'oleti' ),
+								},
+								{ value: 'div', label: __( 'div', 'oleti' ) },
+								{
+									value: 'footer',
+									label: __( 'footer', 'oleti' ),
+								},
+								{
+									value: 'header',
+									label: __( 'header', 'oleti' ),
+								},
+								{ value: 'main', label: __( 'main', 'oleti' ) },
+								{ value: 'nav', label: __( 'nav', 'oleti' ) },
+								{
+									value: 'section',
+									label: __( 'section', 'oleti' ),
+								},
+							] }
+						/>
+					</PanelBody>
 				</InspectorControls>
 			</Fragment>
 		);

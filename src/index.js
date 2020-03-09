@@ -103,6 +103,10 @@ registerBlockType( 'oleti/section', {
 			type: 'string',
 			default: 'px',
 		},
+		tagName: {
+			type: 'string',
+			default: 'section',
+		},
 	},
 
 	example: {

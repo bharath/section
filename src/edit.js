@@ -27,6 +27,10 @@ class SectionEdit extends Component {
 			isSelected,
 		} = this.props;
 
+		const { tagName } = attributes;
+
+		const CustomTagname = `${ tagName }`;
+
 		const hasPadding = !! attributes.paddingSize;
 
 		const hasMargin = !! attributes.marginSize;
@@ -45,7 +49,7 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<div className={ classes }>
+				<CustomTagname className={ classes }>
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks
 							renderAppender={
@@ -54,7 +58,7 @@ class SectionEdit extends Component {
 							}
 						/>
 					</div>
-				</div>
+				</CustomTagname>
 			</Fragment>
 		);
 	}
