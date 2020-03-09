@@ -37,7 +37,7 @@ registerBlockType( 'oleti/section', {
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
 	description: __(
-		'A Section Block for Gutenberg that allows you to add other blocks inside.',
+		'A Gutenberg block that allows you to add other blocks inside.',
 		'oleti'
 	),
 

@@ -1,5 +1,9 @@
-# Section - A Section Block for Gutenberg that allows you to add other blocks inside.
+# Section - A Gutenberg block that allows you to add other blocks inside.
 
-Section Block is maintained and developed by [Bharath](https://github.com/bharath/).
+## Requirements
 
-Developed as a final project for Zac Gordon's [JavaScript & WordPress Bootcamp](https://javascriptforwp.com/bootcamp/wordpress/), Section Block is open source software.
+Latest version of [Gutenberg](https://github.com/WordPress/gutenberg) plugin needs to be installed.
+
+## Contributors & Developers
+
+Section Block is maintained and developed by [Bharath](https://github.com/bharath/). Section Block is open source software.
