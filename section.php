@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Section
- * Description:     A Section Block for Gutenberg
+ * Description:     A Section Block for Gutenberg that allows you to add other blocks inside.
  * Version:         0.1.0
  * Author:          Bharath
  * License:         GPL-2.0-or-later

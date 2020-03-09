@@ -565,6 +565,32 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
+/***/ "./src/icon.js":
+/*!*********************!*\
+  !*** ./src/icon.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+var icon = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 512 512"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+  d: "M500 96a12 12 0 0 0 12-12V44a12 12 0 0 0-12-12h-40a12 12 0 0 0-12 12v20H64V44a12 12 0 0 0-12-12H12A12 12 0 0 0 0 44v40a12 12 0 0 0 12 12h20v320H12a12 12 0 0 0-12 12v40a12 12 0 0 0 12 12h40a12 12 0 0 0 12-12v-20h384v20a12 12 0 0 0 12 12h40a12 12 0 0 0 12-12v-40a12 12 0 0 0-12-12h-20V96zm-84 276a12 12 0 0 1-12 12H236a12 12 0 0 1-12-12v-84H108a12 12 0 0 1-12-12V140a12 12 0 0 1 12-12h168a12 12 0 0 1 12 12v84h116a12 12 0 0 1 12 12z",
+  class: "icon-secondary"
+}), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("path", {
+  d: "M288 140v136a12 12 0 0 1-12 12H108a12 12 0 0 1-12-12V140a12 12 0 0 1 12-12h168a12 12 0 0 1 12 12z",
+  class: "icon-primary"
+}));
+/* harmony default export */ __webpack_exports__["default"] = (icon);
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -581,6 +607,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _deprecated__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deprecated */ "./src/deprecated.js");
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/save.js");
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./icon */ "./src/icon.js");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -602,6 +629,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Every block starts by registering a new block type definition.
  *
@@ -619,7 +647,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
    * This is a short description for your block, can be translated with `i18n` functions.
    * It will be shown in the Block Tab in the Settings Sidebar.
    */
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Section Block for Gutenberg', 'oleti'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('A Section Block for Gutenberg that allows you to add other blocks inside.', 'oleti'),
 
   /**
    * Blocks are grouped into categories to help users browse and discover them.
@@ -631,7 +659,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
    * An icon property should be specified to make it easier to identify a block.
    * These can be any of WordPress’ Dashicons, or a custom svg element.
    */
-  icon: 'smiley',
+  icon: _icon__WEBPACK_IMPORTED_MODULE_5__["default"],
 
   /**
    * Optional block extended support features.

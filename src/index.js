@@ -20,6 +20,7 @@ import { createBlock } from '@wordpress/blocks';
 import deprecated from './deprecated';
 import edit from './edit';
 import save from './save';
+import icon from './icon';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -37,7 +38,7 @@ registerBlockType( 'oleti/section', {
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
-	description: __( 'Section Block for Gutenberg', 'oleti' ),
+	description: __( 'A Section Block for Gutenberg that allows you to add other blocks inside.', 'oleti' ),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
@@ -49,7 +50,7 @@ registerBlockType( 'oleti/section', {
 	 * An icon property should be specified to make it easier to identify a block.
 	 * These can be any of WordPress’ Dashicons, or a custom svg element.
 	 */
-	icon: 'smiley',
+	icon,
 
 	/**
 	 * Optional block extended support features.
