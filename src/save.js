@@ -17,7 +17,7 @@ export default function save( { className, attributes } ) {
 		tagName,
 	} = attributes;
 
-	const CustomTagname = `${ tagName }`;
+	const CustomTag = `${ tagName }`;
 
 	const backgroundClass = getColorClassName(
 		'background-color',
@@ -45,10 +45,10 @@ export default function save( { className, attributes } ) {
 	};
 
 	return (
-		<CustomTagname className={ classes } style={ styles }>
+		<CustomTag className={ classes } style={ styles }>
 			<div className="wp-block-oleti-section__inner-container">
 				<InnerBlocks.Content />
 			</div>
-		</CustomTagname>
+		</CustomTag>
 	);
 }

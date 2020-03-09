@@ -58,7 +58,7 @@ const deprecated = [
 				tagName,
 			} = attributes;
 
-			const CustomTagname = `${ tagName }`;
+			const CustomTag = `${ tagName }`;
 
 			const backgroundClass = getColorClassName(
 				'background-color',
@@ -88,11 +88,11 @@ const deprecated = [
 			};
 
 			return (
-				<CustomTagname className={ classes } style={ styles }>
+				<CustomTag className={ classes } style={ styles }>
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks.Content />
 					</div>
-				</CustomTagname>
+				</CustomTag>
 			);
 		},
 	},

@@ -29,7 +29,7 @@ class SectionEdit extends Component {
 
 		const { tagName } = attributes;
 
-		const CustomTagname = `${ tagName }`;
+		const CustomTag = `${ tagName }`;
 
 		const hasPadding = !! attributes.paddingSize;
 
@@ -49,7 +49,7 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTagname className={ classes }>
+				<CustomTag className={ classes }>
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks
 							renderAppender={
@@ -58,7 +58,7 @@ class SectionEdit extends Component {
 							}
 						/>
 					</div>
-				</CustomTagname>
+				</CustomTag>
 			</Fragment>
 		);
 	}

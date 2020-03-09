@@ -138,7 +138,10 @@ class Inspector extends Component {
 									value: 'aside',
 									label: __( 'aside', 'oleti' ),
 								},
-								{ value: 'div', label: __( 'div', 'oleti' ) },
+								{
+									value: 'div',
+									label: __( 'div', 'oleti' ),
+								},
 								{
 									value: 'footer',
 									label: __( 'footer', 'oleti' ),
@@ -147,8 +150,14 @@ class Inspector extends Component {
 									value: 'header',
 									label: __( 'header', 'oleti' ),
 								},
-								{ value: 'main', label: __( 'main', 'oleti' ) },
-								{ value: 'nav', label: __( 'nav', 'oleti' ) },
+								{
+									value: 'main',
+									label: __( 'main', 'oleti' ),
+								},
+								{
+									value: 'nav',
+									label: __( 'nav', 'oleti' ),
+								},
 								{
 									value: 'section',
 									label: __( 'section', 'oleti' ),
