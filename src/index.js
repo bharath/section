@@ -12,6 +12,15 @@ import { registerBlockType } from '@wordpress/blocks';
  */
 import { __ } from '@wordpress/i18n';
 
+import { createBlock } from '@wordpress/blocks';
+
+/**
+ * Internal dependencies
+ */
+import deprecated from './deprecated';
+import edit from './edit';
+import save from './save';
+
 /**
  * Every block starts by registering a new block type definition.
  *
@@ -46,8 +55,169 @@ registerBlockType( 'oleti/section', {
 	 * Optional block extended support features.
 	 */
 	supports: {
+		// Pick which alignment options to display ('left', 'right', 'center', 'wide','full').
+		align: [ 'wide', 'full' ],
+		// Add the support for an anchor link.
+		anchor: true,
 		// Removes support for an HTML mode.
 		html: false,
+	},
+
+	// Make it easier to discover a block with keyword aliases.
+	// These can be localised so your keywords work across locales.
+	keywords: [
+		__( 'section', 'oleti' ),
+		__( 'group', 'oleti' ),
+		__( 'container', 'oleti' ),
+		__( 'row', 'oleti' ),
+		__( 'wrapper', 'oleti' )
+	],
+
+	// Specifying block attributes
+	attributes: {
+		backgroundColor: {
+			type: 'string',
+		},
+		textColor: {
+			type: 'string',
+		},
+		customBackgroundColor: {
+			type: 'string',
+		},
+		customTextColor: {
+			type: 'string',
+		},
+		paddingSize: {
+			type: 'string',
+		},
+		paddingUnit: {
+			type: 'string',
+			default: 'px',
+		},
+		marginSize: {
+			type: 'string',
+		},
+		marginUnit: {
+			type: 'string',
+			default: 'px',
+		},
+	},
+
+	example: {
+		attributes: {
+			customBackgroundColor: '#ffffff',
+			customTextColor: '#000000',
+		},
+		innerBlocks: [
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#cf2e2e',
+					fontSize: 'large',
+					content: __( 'One.' ),
+				},
+			},
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#ff6900',
+					fontSize: 'large',
+					content: __( 'Two.' ),
+				},
+			},
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#fcb900',
+					fontSize: 'large',
+					content: __( 'Three.' ),
+				},
+			},
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#00d084',
+					fontSize: 'large',
+					content: __( 'Four.' ),
+				},
+			},
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#0693e3',
+					fontSize: 'large',
+					content: __( 'Five.' ),
+				},
+			},
+			{
+				name: 'core/paragraph',
+				attributes: {
+					customTextColor: '#9b51e0',
+					fontSize: 'large',
+					content: __( 'Six.' ),
+				},
+			},
+		],
+	},
+
+	/**
+	 * For grouping & ungrouping blocks into Section blocks.
+	 * Based on the Group block.
+	 *
+	 * @see https://github.com/WordPress/gutenberg/blob/master/packages/block-library/src/group/index.js
+	 */
+	transforms: {
+		from: [
+			{
+				type: 'block',
+				isMultiBlock: true,
+				blocks: [ '*' ],
+				__experimentalConvert( blocks ) {
+					// Avoid transforming a single `oleti/section` Block
+					if (
+						blocks.length === 1 &&
+						blocks[ 0 ].name === 'oleti/section'
+					) {
+						return;
+					}
+
+					const alignments = [ 'wide', 'full' ];
+
+					// Determine the widest setting of all the blocks to be grouped
+					const widestAlignment = blocks.reduce(
+						( accumulator, block ) => {
+							const { align } = block.attributes;
+							return alignments.indexOf( align ) >
+								alignments.indexOf( accumulator )
+								? align
+								: accumulator;
+						},
+						undefined
+					);
+
+					// Clone the Blocks to be Grouped
+					// Failing to create new block references causes the original blocks
+					// to be replaced in the switchToBlockType call thereby meaning they
+					// are removed both from their original location and within the
+					// new group block.
+					const groupInnerBlocks = blocks.map( ( block ) => {
+						return createBlock(
+							block.name,
+							block.attributes,
+							block.innerBlocks
+						);
+					} );
+
+					return createBlock(
+						'oleti/section',
+						{
+							align: widestAlignment,
+						},
+						groupInnerBlocks
+					);
+				},
+			},
+		],
 	},
 
 	/**
@@ -60,13 +230,7 @@ registerBlockType( 'oleti/section', {
 	 *
 	 * @return {WPElement} Element to render.
 	 */
-	edit( { className } ) {
-		return (
-			<p className={ className }>
-				{ __( 'Section Block – hello from the editor!', 'oleti' ) }
-			</p>
-		);
-	},
+	edit,
 
 	/**
 	 * The save function defines the way in which the different attributes should be combined
@@ -76,14 +240,7 @@ registerBlockType( 'oleti/section', {
 	 *
 	 * @return {WPElement} Element to render.
 	 */
-	save() {
-		return (
-			<p>
-				{ __(
-					'Section Block – hello from the saved content!',
-					'oleti'
-				) }
-			</p>
-		);
-	},
+	save,
+
+	deprecated,
 } );
