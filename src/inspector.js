@@ -25,10 +25,7 @@ import {
 const { getComputedStyle } = window;
 
 const applyFallbackStyles = withFallbackStyles( ( node, ownProps ) => {
-	const {
-		textColor,
-		backgroundColor,
-	} = ownProps.attributes;
+	const { textColor, backgroundColor } = ownProps.attributes;
 	const editableNode = node.querySelector( '[contenteditable="true"]' );
 	const computedStyles = editableNode
 		? getComputedStyle( editableNode )

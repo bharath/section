@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType, createBlock } from '@wordpress/blocks';
 
 /**
  * Retrieves the translation of text.
@@ -11,8 +11,6 @@ import { registerBlockType } from '@wordpress/blocks';
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
-
-import { createBlock } from '@wordpress/blocks';
 
 /**
  * Internal dependencies
@@ -38,7 +36,10 @@ registerBlockType( 'oleti/section', {
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
-	description: __( 'A Section Block for Gutenberg that allows you to add other blocks inside.', 'oleti' ),
+	description: __(
+		'A Section Block for Gutenberg that allows you to add other blocks inside.',
+		'oleti'
+	),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
@@ -71,7 +72,7 @@ registerBlockType( 'oleti/section', {
 		__( 'group', 'oleti' ),
 		__( 'container', 'oleti' ),
 		__( 'row', 'oleti' ),
-		__( 'wrapper', 'oleti' )
+		__( 'wrapper', 'oleti' ),
 	],
 
 	// Specifying block attributes

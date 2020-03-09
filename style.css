@@ -6,37 +6,37 @@
  */
 
 .wp-block-oleti-section.padding-small {
-	padding: .5em
+	padding: 0.5em;
 }
 
 .wp-block-oleti-section.padding-medium {
-	padding: 1em
+	padding: 1em;
 }
 
 .wp-block-oleti-section.padding-large {
-	padding: 1.5em
+	padding: 1.5em;
 }
 
 .wp-block-oleti-section.padding-xlarge {
-	padding: 2em
+	padding: 2em;
 }
 
 .wp-block-oleti-section.margin-small {
-	margin-bottom: .5em;
-	margin-top: .5em
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 .wp-block-oleti-section.margin-medium {
 	margin-bottom: 1em;
-	margin-top: 1em
+	margin-top: 1em;
 }
 
 .wp-block-oleti-section.margin-large {
 	margin-bottom: 1.5em;
-	margin-top: 1.5em
+	margin-top: 1.5em;
 }
 
 .wp-block-oleti-section.margin-xlarge {
 	margin-bottom: 2em;
-	margin-top: 2em
+	margin-top: 2em;
 }

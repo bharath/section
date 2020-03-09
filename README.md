@@ -1,4 +1,4 @@
-# Section - A Section block for Gutenberg
+# Section - A Section Block for Gutenberg that allows you to add other blocks inside.
 
 Section Block is maintained and developed by [Bharath](https://github.com/bharath/).
 
