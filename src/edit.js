@@ -46,10 +46,15 @@ class SectionEdit extends Component {
 			[ `margin-${ attributes.marginSize }` ]: hasMargin,
 		} );
 
+		const styles = {
+			backgroundColor: backgroundColor.color,
+			color: textColor.color,
+		};
+
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTag className={ classes }>
+				<CustomTag className={ classes } style={ styles }>
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks
 							renderAppender={

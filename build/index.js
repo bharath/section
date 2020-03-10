@@ -544,8 +544,13 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
         'has-background': backgroundColor.color,
         'has-text-color': textColor.color
       }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, backgroundColor.class, backgroundColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, textColor.class, textColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-padding', hasPadding), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-margin', hasMargin), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-".concat(attributes.paddingSize), hasPadding), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "margin-".concat(attributes.marginSize), hasMargin), _classnames));
+      var styles = {
+        backgroundColor: backgroundColor.color,
+        color: textColor.color
+      };
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, isSelected && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_inspector__WEBPACK_IMPORTED_MODULE_11__["default"], this.props), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(CustomTag, {
-        className: classes
+        className: classes,
+        style: styles
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("div", {
         className: "wp-block-oleti-section__inner-container"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_10__["InnerBlocks"], {
@@ -934,8 +939,8 @@ var Inspector = /*#__PURE__*/function (_Component) {
         onChange: Object(lodash__WEBPACK_IMPORTED_MODULE_7__["partialRight"])(updateSpacing, 'marginSize'),
         help: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('Adjust spacing on the sides of the block.', 'oleti')
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_10__["PanelColorSettings"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('Color Settings', 'oleti') //initialOpen={ false }
-        ,
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('Color Settings', 'oleti'),
+        initialOpen: false,
         colorSettings: [{
           value: backgroundColor.color,
           onChange: setBackgroundColor,
@@ -951,7 +956,8 @@ var Inspector = /*#__PURE__*/function (_Component) {
         fallbackTextColor: fallbackTextColor,
         fallbackBackgroundColor: fallbackBackgroundColor
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_11__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('Layout', 'oleti')
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('Layout', 'oleti'),
+        initialOpen: false
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_11__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_8__["__"])('HTML Tag', 'oleti'),
         value: tagName,

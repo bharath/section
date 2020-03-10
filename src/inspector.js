@@ -97,7 +97,7 @@ class Inspector extends Component {
 					</PanelBody>
 					<PanelColorSettings
 						title={ __( 'Color Settings', 'oleti' ) }
-						//initialOpen={ false }
+						initialOpen={ false }
 						colorSettings={ [
 							{
 								value: backgroundColor.color,
@@ -120,7 +120,10 @@ class Inspector extends Component {
 							} }
 						/>
 					</PanelColorSettings>
-					<PanelBody title={ __( 'Layout', 'oleti' ) }>
+					<PanelBody
+						title={ __( 'Layout', 'oleti' ) }
+						initialOpen={ false }
+					>
 						<SelectControl
 							label={ __( 'HTML Tag', 'oleti' ) }
 							value={ tagName }
