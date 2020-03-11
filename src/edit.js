@@ -28,11 +28,8 @@ class SectionEdit extends Component {
 		} = this.props;
 
 		const { tagName } = attributes;
-
 		const CustomTag = `${ tagName }`;
-
 		const hasPadding = !! attributes.paddingSize;
-
 		const hasMargin = !! attributes.marginSize;
 
 		const classes = classnames( className, {
@@ -71,7 +68,6 @@ class SectionEdit extends Component {
 
 export default compose( [
 	withColors( 'backgroundColor', { textColor: 'color' } ),
-
 	withSelect( ( select, { clientId } ) => {
 		const { getBlock } = select( 'core/block-editor' );
 
