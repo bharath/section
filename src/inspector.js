@@ -1,9 +1,4 @@
 /**
- * External dependencies
- */
-import { partialRight } from 'lodash';
-
-/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -19,8 +14,8 @@ import {
 import {
 	PanelBody,
 	withFallbackStyles,
-	__experimentalDimensionControl as DimensionControl,
 	SelectControl,
+	RangeControl,
 } from '@wordpress/components';
 
 const { getComputedStyle } = window;
@@ -54,13 +49,13 @@ class Inspector extends Component {
 			setAttributes,
 		} = this.props;
 
-		const { tagName } = attributes;
-
-		const updateSpacing = ( size, dimensionAttr ) => {
-			setAttributes( {
-				[ dimensionAttr ]: size,
-			} );
-		};
+		const {
+			tagName,
+			paddingTop,
+			paddingBottom,
+			marginTop,
+			marginBottom,
+		} = attributes;
 
 		return (
 			<Fragment>
@@ -69,30 +64,57 @@ class Inspector extends Component {
 						title={ __( 'Spacing', 'oleti' ) }
 						//initialOpen={ false }
 					>
-						<DimensionControl
-							label={ __( 'Padding', 'oleti' ) }
-							value={ attributes.paddingSize }
-							onChange={ partialRight(
-								updateSpacing,
-								'paddingSize'
-							) }
-							help={ __(
-								'Adjust spacing around content within the block.',
-								'oleti'
-							) }
+						<RangeControl
+							value={ paddingTop }
+							onChange={ ( newPaddingTop ) =>
+								setAttributes( {
+									paddingTop: newPaddingTop,
+								} )
+							}
+							label={ __( 'Padding Top' ) }
+							min={ 0 }
+							max={ 100 }
+							initialPosition={ 0 }
+							allowReset
 						/>
-
-						<DimensionControl
-							label={ __( 'Margin', 'oleti' ) }
-							value={ attributes.marginSize }
-							onChange={ partialRight(
-								updateSpacing,
-								'marginSize'
-							) }
-							help={ __(
-								'Adjust spacing on the sides of the block.',
-								'oleti'
-							) }
+						<RangeControl
+							value={ paddingBottom }
+							onChange={ ( newPaddingBottom ) =>
+								setAttributes( {
+									paddingBottom: newPaddingBottom,
+								} )
+							}
+							label={ __( 'Padding Bottom' ) }
+							min={ 0 }
+							max={ 100 }
+							initialPosition={ 0 }
+							allowReset
+						/>
+						<RangeControl
+							value={ marginTop }
+							onChange={ ( newMarginTop ) =>
+								setAttributes( {
+									marginTop: newMarginTop,
+								} )
+							}
+							label={ __( 'Margin Top' ) }
+							min={ 0 }
+							max={ 100 }
+							initialPosition={ 0 }
+							allowReset
+						/>
+						<RangeControl
+							value={ marginBottom }
+							onChange={ ( newMarginBottom ) =>
+								setAttributes( {
+									marginBottom: newMarginBottom,
+								} )
+							}
+							label={ __( 'Margin Bottom' ) }
+							min={ 0 }
+							max={ 100 }
+							initialPosition={ 0 }
+							allowReset
 						/>
 					</PanelBody>
 					<PanelColorSettings

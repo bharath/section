@@ -15,6 +15,10 @@ export default function save( { className, attributes } ) {
 		textColor,
 		customTextColor,
 		tagName,
+		paddingTop,
+		paddingBottom,
+		marginTop,
+		marginBottom,
 	} = attributes;
 
 	const CustomTag = `${ tagName }`;
@@ -25,23 +29,31 @@ export default function save( { className, attributes } ) {
 	);
 
 	const textClass = getColorClassName( 'color', textColor );
-
-	const hasPadding = !! attributes.paddingSize;
-
-	const hasMargin = !! attributes.marginSize;
+	const hasPaddingTop = !! attributes.paddingTop;
+	const hasPaddingBottom = !! attributes.paddingBottom;
+	const hasMarginTop = !! attributes.marginTop;
+	const hasMarginBottom = !! attributes.marginBottom;
 
 	const classes = classnames( className, backgroundClass, textClass, {
 		'has-text-color': textColor || customTextColor,
 		'has-background': backgroundColor || customBackgroundColor,
-		'has-padding': hasPadding,
-		'has-margin': hasMargin,
-		[ `padding-${ attributes.paddingSize }` ]: hasPadding,
-		[ `margin-${ attributes.marginSize }` ]: hasMargin,
+		//'has-padding-top': hasPaddingTop,
+		//'has-padding-bottom': hasPaddingBottom,
+		//'has-margin-top': hasMarginTop,
+		//'has-margin-bottom': hasMarginBottom,
+		[ `padding-top-${ attributes.paddingTop }` ]: hasPaddingTop,
+		[ `padding-bottom-${ attributes.paddingBottom }` ]: hasPaddingBottom,
+		[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
+		[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 	} );
 
 	const styles = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
+		paddingTop: paddingTop ? paddingTop + 'px' : undefined,
+		paddingBottom: paddingBottom ? paddingBottom + 'px' : undefined,
+		marginTop: marginTop ? marginTop + 'px' : undefined,
+		marginBottom: marginBottom ? marginBottom + 'px' : undefined,
 	};
 
 	return (

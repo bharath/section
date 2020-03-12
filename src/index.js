@@ -107,6 +107,18 @@ registerBlockType( 'oleti/section', {
 			type: 'string',
 			default: 'section',
 		},
+		paddingTop: {
+			type: 'number',
+		},
+		paddingBottom: {
+			type: 'number',
+		},
+		marginTop: {
+			type: 'number',
+		},
+		marginBottom: {
+			type: 'number',
+		},
 	},
 
 	example: {
