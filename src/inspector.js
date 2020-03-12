@@ -1,9 +1,4 @@
 /**
- * External dependencies
- */
-import { partialRight } from 'lodash';
-
-/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -19,7 +14,6 @@ import {
 import {
 	PanelBody,
 	withFallbackStyles,
-	__experimentalDimensionControl as DimensionControl,
 	SelectControl,
 } from '@wordpress/components';
 
@@ -54,13 +48,13 @@ class Inspector extends Component {
 			setAttributes,
 		} = this.props;
 
-		const { tagName } = attributes;
-
-		const updateSpacing = ( size, dimensionAttr ) => {
-			setAttributes( {
-				[ dimensionAttr ]: size,
-			} );
-		};
+		const {
+			tagName,
+			paddingTop,
+			paddingBottom,
+			marginTop,
+			marginBottom,
+		} = attributes;
 
 		return (
 			<Fragment>
@@ -69,30 +63,77 @@ class Inspector extends Component {
 						title={ __( 'Spacing', 'oleti' ) }
 						//initialOpen={ false }
 					>
-						<DimensionControl
-							label={ __( 'Padding', 'oleti' ) }
-							value={ attributes.paddingSize }
-							onChange={ partialRight(
-								updateSpacing,
-								'paddingSize'
-							) }
-							help={ __(
-								'Adjust spacing around content within the block.',
-								'oleti'
-							) }
+						<SelectControl
+							label={ __( 'Padding Top' ) }
+							value={ paddingTop }
+							onChange={ ( newPaddingTop ) =>
+								setAttributes( {
+									paddingTop: newPaddingTop,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
-
-						<DimensionControl
-							label={ __( 'Margin', 'oleti' ) }
-							value={ attributes.marginSize }
-							onChange={ partialRight(
-								updateSpacing,
-								'marginSize'
-							) }
-							help={ __(
-								'Adjust spacing on the sides of the block.',
-								'oleti'
-							) }
+						<SelectControl
+							label={ __( 'Padding Bottom' ) }
+							value={ paddingBottom }
+							onChange={ ( newPaddingBottom ) =>
+								setAttributes( {
+									paddingBottom: newPaddingBottom,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Margin Top' ) }
+							value={ marginTop }
+							onChange={ ( newMarginTop ) =>
+								setAttributes( {
+									marginTop: newMarginTop,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Margin Bottom' ) }
+							value={ marginBottom }
+							onChange={ ( newMarginBottom ) =>
+								setAttributes( {
+									marginBottom: newMarginBottom,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
 					</PanelBody>
 					<PanelColorSettings
