@@ -15,7 +15,7 @@
 }
 
 .wp-block-oleti-section.padding-right-extra-small {
-	padding-top: 15px;
+	padding-right: 15px;
 }
 
 .wp-block-oleti-section.padding-bottom-extra-small {
@@ -23,7 +23,7 @@
 }
 
 .wp-block-oleti-section.padding-left-extra-small {
-	padding-top: 15px;
+	padding-left: 15px;
 }
 
 .wp-block-oleti-section.padding-top-small {
@@ -31,7 +31,7 @@
 }
 
 .wp-block-oleti-section.padding-right-small {
-	padding-top: 30px;
+	padding-right: 30px;
 }
 
 .wp-block-oleti-section.padding-bottom-small {
@@ -39,7 +39,7 @@
 }
 
 .wp-block-oleti-section.padding-left-small {
-	padding-top: 30px;
+	padding-left: 30px;
 }
 
 .wp-block-oleti-section.padding-top-normal {
@@ -47,7 +47,7 @@
 }
 
 .wp-block-oleti-section.padding-right-normal {
-	padding-top: 45px;
+	padding-right: 45px;
 }
 
 .wp-block-oleti-section.padding-bottom-normal {
@@ -55,7 +55,7 @@
 }
 
 .wp-block-oleti-section.padding-left-normal {
-	padding-top: 45px;
+	padding-left: 45px;
 }
 
 .wp-block-oleti-section.padding-top-medium {
@@ -63,7 +63,7 @@
 }
 
 .wp-block-oleti-section.padding-right-medium {
-	padding-top: 60px;
+	padding-right: 60px;
 }
 
 .wp-block-oleti-section.padding-bottom-medium {
@@ -71,7 +71,7 @@
 }
 
 .wp-block-oleti-section.padding-left-medium {
-	padding-top: 60px;
+	padding-left: 60px;
 }
 
 .wp-block-oleti-section.padding-top-large {
@@ -79,7 +79,7 @@
 }
 
 .wp-block-oleti-section.padding-right-large {
-	padding-top: 75px;
+	padding-right: 75px;
 }
 
 .wp-block-oleti-section.padding-bottom-large {
@@ -87,7 +87,7 @@
 }
 
 .wp-block-oleti-section.padding-left-large {
-	padding-top: 75px;
+	padding-left: 75px;
 }
 
 .wp-block-oleti-section.padding-top-extra-large {
@@ -95,7 +95,7 @@
 }
 
 .wp-block-oleti-section.padding-right-extra-large {
-	padding-top: 100px;
+	padding-right: 100px;
 }
 
 .wp-block-oleti-section.padding-bottom-extra-large {
@@ -103,7 +103,7 @@
 }
 
 .wp-block-oleti-section.padding-left-extra-large {
-	padding-top: 100px;
+	padding-left: 100px;
 }
 
 .wp-block-oleti-section.margin-top-extra-small {
