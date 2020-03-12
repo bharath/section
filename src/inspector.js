@@ -59,9 +59,33 @@ class Inspector extends Component {
 		return (
 			<Fragment>
 				<InspectorControls>
+					<PanelColorSettings
+						title={ __( 'Color Settings', 'oleti' ) }
+						colorSettings={ [
+							{
+								value: backgroundColor.color,
+								onChange: setBackgroundColor,
+								label: __( 'Background Color', 'oleti' ),
+							},
+							{
+								value: textColor.color,
+								onChange: setTextColor,
+								label: __( 'Text Color', 'oleti' ),
+							},
+						] }
+					>
+						<ContrastChecker
+							{ ...{
+								textColor: textColor.color,
+								backgroundColor: backgroundColor.color,
+								fallbackTextColor,
+								fallbackBackgroundColor,
+							} }
+						/>
+					</PanelColorSettings>
 					<PanelBody
 						title={ __( 'Spacing', 'oleti' ) }
-						//initialOpen={ false }
+						initialOpen={ false }
 					>
 						<SelectControl
 							label={ __( 'Padding Top' ) }
@@ -136,31 +160,6 @@ class Inspector extends Component {
 							] }
 						/>
 					</PanelBody>
-					<PanelColorSettings
-						title={ __( 'Color Settings', 'oleti' ) }
-						initialOpen={ false }
-						colorSettings={ [
-							{
-								value: backgroundColor.color,
-								onChange: setBackgroundColor,
-								label: __( 'Background Color', 'oleti' ),
-							},
-							{
-								value: textColor.color,
-								onChange: setTextColor,
-								label: __( 'Text Color', 'oleti' ),
-							},
-						] }
-					>
-						<ContrastChecker
-							{ ...{
-								textColor: textColor.color,
-								backgroundColor: backgroundColor.color,
-								fallbackTextColor,
-								fallbackBackgroundColor,
-							} }
-						/>
-					</PanelColorSettings>
 					<PanelBody
 						title={ __( 'Layout', 'oleti' ) }
 						initialOpen={ false }
