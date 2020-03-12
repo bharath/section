@@ -5,38 +5,62 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-oleti-section.padding-small {
-	padding: 0.5em;
+.wp-block-oleti-section.margin-top-extra-small,
+.wp-block-oleti-section.padding-top-extra-small {
+	padding-top: 15px;
 }
 
-.wp-block-oleti-section.padding-medium {
-	padding: 1em;
+.wp-block-oleti-section.margin-bottom-extra-small,
+.wp-block-oleti-section.padding-bottom-extra-small {
+	padding-bottom: 15px;
 }
 
-.wp-block-oleti-section.padding-large {
-	padding: 1.5em;
+.wp-block-oleti-section.margin-top-small,
+.wp-block-oleti-section.padding-top-small {
+	padding-top: 30px;
 }
 
-.wp-block-oleti-section.padding-xlarge {
-	padding: 2em;
+.wp-block-oleti-section.margin-bottom-small,
+.wp-block-oleti-section.padding-bottom-small {
+	padding-bottom: 30px;
 }
 
-.wp-block-oleti-section.margin-small {
-	margin-bottom: 0.5em;
-	margin-top: 0.5em;
+.wp-block-oleti-section.margin-top-normal,
+.wp-block-oleti-section.padding-top-normal {
+	padding-top: 45px;
 }
 
-.wp-block-oleti-section.margin-medium {
-	margin-bottom: 1em;
-	margin-top: 1em;
+.wp-block-oleti-section.margin-bottom-normal,
+.wp-block-oleti-section.padding-bottom-normal {
+	padding-bottom: 45px;
 }
 
-.wp-block-oleti-section.margin-large {
-	margin-bottom: 1.5em;
-	margin-top: 1.5em;
+.wp-block-oleti-section.margin-top-medium,
+.wp-block-oleti-section.padding-top-medium {
+	padding-top: 60px;
 }
 
-.wp-block-oleti-section.margin-xlarge {
-	margin-bottom: 2em;
-	margin-top: 2em;
+.wp-block-oleti-section.margin-bottom-medium,
+.wp-block-oleti-section.padding-bottom-medium {
+	padding-bottom: 60px;
+}
+
+.wp-block-oleti-section.margin-top-large,
+.wp-block-oleti-section.padding-top-large {
+	padding-top: 75px;
+}
+
+.wp-block-oleti-section.margin-bottom-large,
+.wp-block-oleti-section.padding-bottom-large {
+	padding-bottom: 75px;
+}
+
+.wp-block-oleti-section.margin-top-extra-large,
+.wp-block-oleti-section.padding-top-extra-large {
+	padding-top: 100px;
+}
+
+.wp-block-oleti-section.margin-bottom-extra-large,
+.wp-block-oleti-section.padding-bottom-extra-large {
+	padding-bottom: 100px;
 }

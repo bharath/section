@@ -27,25 +27,42 @@ class SectionEdit extends Component {
 			isSelected,
 		} = this.props;
 
-		const { tagName } = attributes;
+		const {
+			tagName,
+			paddingTop,
+			paddingBottom,
+			marginTop,
+			marginBottom,
+		} = attributes;
+
 		const CustomTag = `${ tagName }`;
-		const hasPadding = !! attributes.paddingSize;
-		const hasMargin = !! attributes.marginSize;
+		const hasPaddingTop = !! attributes.paddingTop;
+		const hasPaddingBottom = !! attributes.paddingBottom;
+		const hasMarginTop = !! attributes.marginTop;
+		const hasMarginBottom = !! attributes.marginBottom;
 
 		const classes = classnames( className, {
 			'has-background': backgroundColor.color,
 			'has-text-color': textColor.color,
 			[ backgroundColor.class ]: backgroundColor.class,
 			[ textColor.class ]: textColor.class,
-			'has-padding': hasPadding,
-			'has-margin': hasMargin,
-			[ `padding-${ attributes.paddingSize }` ]: hasPadding,
-			[ `margin-${ attributes.marginSize }` ]: hasMargin,
+			//'has-padding-top': hasPaddingTop,
+			//'has-padding-bottom': hasPaddingBottom,
+			//'has-margin-top': hasMarginTop,
+			//'has-margin-bottom': hasMarginBottom,
+			[ `padding-top-${ attributes.paddingTop }` ]: hasPaddingTop,
+			[ `padding-bottom-${ attributes.paddingBottom }` ]: hasPaddingBottom,
+			[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
+			[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 		} );
 
 		const styles = {
 			backgroundColor: backgroundColor.color,
 			color: textColor.color,
+			paddingTop: paddingTop ? paddingTop + 'px' : undefined,
+			paddingBottom: paddingBottom ? paddingBottom + 'px' : undefined,
+			marginTop: marginTop ? marginTop + 'px' : undefined,
+			marginBottom: marginBottom ? marginBottom + 'px' : undefined,
 		};
 
 		return (
