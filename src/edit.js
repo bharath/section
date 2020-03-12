@@ -30,14 +30,18 @@ class SectionEdit extends Component {
 		const {
 			tagName,
 			paddingTop,
+			paddingRight,
 			paddingBottom,
+			paddingLeft,
 			marginTop,
 			marginBottom,
 		} = attributes;
 
 		const CustomTag = `${ tagName }`;
 		const hasPaddingTop = !! attributes.paddingTop;
+		const hasPaddingRight = !! attributes.paddingRight;
 		const hasPaddingBottom = !! attributes.paddingBottom;
+		const hasPaddingLeft = !! attributes.paddingLeft;
 		const hasMarginTop = !! attributes.marginTop;
 		const hasMarginBottom = !! attributes.marginBottom;
 
@@ -51,7 +55,9 @@ class SectionEdit extends Component {
 			//'has-margin-top': hasMarginTop,
 			//'has-margin-bottom': hasMarginBottom,
 			[ `padding-top-${ attributes.paddingTop }` ]: hasPaddingTop,
+			[ `padding-right-${ attributes.paddingRight }` ]: hasPaddingRight,
 			[ `padding-bottom-${ attributes.paddingBottom }` ]: hasPaddingBottom,
+			[ `padding-left-${ attributes.paddingLeft }` ]: hasPaddingLeft,
 			[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 			[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 		} );
@@ -60,7 +66,9 @@ class SectionEdit extends Component {
 			backgroundColor: backgroundColor.color,
 			color: textColor.color,
 			paddingTop: paddingTop ? paddingTop + 'px' : undefined,
+			paddingRight: paddingRight ? paddingRight + 'px' : undefined,
 			paddingBottom: paddingBottom ? paddingBottom + 'px' : undefined,
+			paddingLeft: paddingLeft ? paddingLeft + 'px' : undefined,
 			marginTop: marginTop ? marginTop + 'px' : undefined,
 			marginBottom: marginBottom ? marginBottom + 'px' : undefined,
 		};

@@ -99,11 +99,19 @@ registerBlockType( 'oleti/section', {
 		},
 		paddingTop: {
 			type: 'string',
-			default: 'none',
+			default: 'extra-small',
 		},
 		paddingBottom: {
 			type: 'string',
-			default: 'none',
+			default: 'extra-small',
+		},
+		paddingLeft: {
+			type: 'string',
+			default: 'extra-small',
+		},
+		paddingRight: {
+			type: 'string',
+			default: 'extra-small',
 		},
 		marginTop: {
 			type: 'number',

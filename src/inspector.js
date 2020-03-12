@@ -51,7 +51,9 @@ class Inspector extends Component {
 		const {
 			tagName,
 			paddingTop,
+			paddingRight,
 			paddingBottom,
+			paddingLeft,
 			marginTop,
 			marginBottom,
 		} = attributes;
@@ -106,11 +108,47 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
+							label={ __( 'Padding Right' ) }
+							value={ paddingRight }
+							onChange={ ( newPaddingRight ) =>
+								setAttributes( {
+									paddingRight: newPaddingRight,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
+						/>
+						<SelectControl
 							label={ __( 'Padding Bottom' ) }
 							value={ paddingBottom }
 							onChange={ ( newPaddingBottom ) =>
 								setAttributes( {
 									paddingBottom: newPaddingBottom,
+								} )
+							}
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
+						/>
+						<SelectControl
+							label={ __( 'Padding Left' ) }
+							value={ paddingLeft }
+							onChange={ ( newPaddingLeft ) =>
+								setAttributes( {
+									paddingLeft: newPaddingLeft,
 								} )
 							}
 							options={ [

@@ -26,7 +26,9 @@ export default function save( { className, attributes } ) {
 
 	const textClass = getColorClassName( 'color', textColor );
 	const hasPaddingTop = !! attributes.paddingTop;
+	const hasPaddingRight = !! attributes.paddingRight;
 	const hasPaddingBottom = !! attributes.paddingBottom;
+	const hasPaddingLeft = !! attributes.paddingLeft;
 	const hasMarginTop = !! attributes.marginTop;
 	const hasMarginBottom = !! attributes.marginBottom;
 
@@ -38,7 +40,9 @@ export default function save( { className, attributes } ) {
 		//'has-margin-top': hasMarginTop,
 		//'has-margin-bottom': hasMarginBottom,
 		[ `padding-top-${ attributes.paddingTop }` ]: hasPaddingTop,
+		[ `padding-right-${ attributes.paddingRight }` ]: hasPaddingRight,
 		[ `padding-bottom-${ attributes.paddingBottom }` ]: hasPaddingBottom,
+		[ `padding-left-${ attributes.paddingLeft }` ]: hasPaddingLeft,
 		[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 		[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 	} );
