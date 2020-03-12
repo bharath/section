@@ -15,7 +15,6 @@ import {
 	PanelBody,
 	withFallbackStyles,
 	SelectControl,
-	RangeControl,
 } from '@wordpress/components';
 
 const { getComputedStyle } = window;
@@ -64,57 +63,77 @@ class Inspector extends Component {
 						title={ __( 'Spacing', 'oleti' ) }
 						//initialOpen={ false }
 					>
-						<RangeControl
+						<SelectControl
+							label={ __( 'Padding Top' ) }
 							value={ paddingTop }
 							onChange={ ( newPaddingTop ) =>
 								setAttributes( {
 									paddingTop: newPaddingTop,
 								} )
 							}
-							label={ __( 'Padding Top' ) }
-							min={ 0 }
-							max={ 100 }
-							initialPosition={ 0 }
-							allowReset
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
-						<RangeControl
+						<SelectControl
+							label={ __( 'Padding Bottom' ) }
 							value={ paddingBottom }
 							onChange={ ( newPaddingBottom ) =>
 								setAttributes( {
 									paddingBottom: newPaddingBottom,
 								} )
 							}
-							label={ __( 'Padding Bottom' ) }
-							min={ 0 }
-							max={ 100 }
-							initialPosition={ 0 }
-							allowReset
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
-						<RangeControl
+						<SelectControl
+							label={ __( 'Margin Top' ) }
 							value={ marginTop }
 							onChange={ ( newMarginTop ) =>
 								setAttributes( {
 									marginTop: newMarginTop,
 								} )
 							}
-							label={ __( 'Margin Top' ) }
-							min={ 0 }
-							max={ 100 }
-							initialPosition={ 0 }
-							allowReset
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
-						<RangeControl
+						<SelectControl
+							label={ __( 'Margin Bottom' ) }
 							value={ marginBottom }
 							onChange={ ( newMarginBottom ) =>
 								setAttributes( {
 									marginBottom: newMarginBottom,
 								} )
 							}
-							label={ __( 'Margin Bottom' ) }
-							min={ 0 }
-							max={ 100 }
-							initialPosition={ 0 }
-							allowReset
+							options={ [
+								{ value: 'none', label: 'None' },
+								{ value: 'extra-small', label: 'Extra Small' },
+								{ value: 'small', label: 'Small' },
+								{ value: 'normal', label: 'Normal' },
+								{ value: 'medium', label: 'Medium' },
+								{ value: 'large', label: 'Large' },
+								{ value: 'extra-large', label: 'Extra Large' },
+							] }
 						/>
 					</PanelBody>
 					<PanelColorSettings

@@ -77,6 +77,10 @@ registerBlockType( 'oleti/section', {
 
 	// Specifying block attributes
 	attributes: {
+		align: {
+			type: 'string',
+			default: 'wide',
+		},
 		backgroundColor: {
 			type: 'string',
 		},
@@ -89,35 +93,25 @@ registerBlockType( 'oleti/section', {
 		customTextColor: {
 			type: 'string',
 		},
-		paddingSize: {
-			type: 'string',
-		},
-		paddingUnit: {
-			type: 'string',
-			default: 'px',
-		},
-		marginSize: {
-			type: 'string',
-		},
-		marginUnit: {
-			type: 'string',
-			default: 'px',
-		},
 		tagName: {
 			type: 'string',
 			default: 'section',
 		},
 		paddingTop: {
-			type: 'number',
+			type: 'string',
+			default: 'none',
 		},
 		paddingBottom: {
-			type: 'number',
+			type: 'string',
+			default: 'none',
 		},
 		marginTop: {
 			type: 'number',
+			default: 'none',
 		},
 		marginBottom: {
 			type: 'number',
+			default: 'none',
 		},
 	},
 
@@ -149,30 +143,6 @@ registerBlockType( 'oleti/section', {
 					customTextColor: '#fcb900',
 					fontSize: 'large',
 					content: __( 'Three.' ),
-				},
-			},
-			{
-				name: 'core/paragraph',
-				attributes: {
-					customTextColor: '#00d084',
-					fontSize: 'large',
-					content: __( 'Four.' ),
-				},
-			},
-			{
-				name: 'core/paragraph',
-				attributes: {
-					customTextColor: '#0693e3',
-					fontSize: 'large',
-					content: __( 'Five.' ),
-				},
-			},
-			{
-				name: 'core/paragraph',
-				attributes: {
-					customTextColor: '#9b51e0',
-					fontSize: 'large',
-					content: __( 'Six.' ),
 				},
 			},
 		],

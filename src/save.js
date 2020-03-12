@@ -15,10 +15,6 @@ export default function save( { className, attributes } ) {
 		textColor,
 		customTextColor,
 		tagName,
-		paddingTop,
-		paddingBottom,
-		marginTop,
-		marginBottom,
 	} = attributes;
 
 	const CustomTag = `${ tagName }`;
@@ -50,10 +46,6 @@ export default function save( { className, attributes } ) {
 	const styles = {
 		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
 		color: textClass ? undefined : customTextColor,
-		paddingTop: paddingTop ? paddingTop + 'px' : undefined,
-		paddingBottom: paddingBottom ? paddingBottom + 'px' : undefined,
-		marginTop: marginTop ? marginTop + 'px' : undefined,
-		marginBottom: marginBottom ? marginBottom + 'px' : undefined,
 	};
 
 	return (
