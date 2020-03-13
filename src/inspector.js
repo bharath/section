@@ -86,7 +86,7 @@ class Inspector extends Component {
 						/>
 					</PanelColorSettings>
 					<PanelBody
-						title={ __( 'Spacing', 'oleti' ) }
+						title={ __( 'Padding Settings', 'oleti' ) }
 						initialOpen={ false }
 					>
 						<SelectControl
@@ -98,13 +98,31 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
 						<SelectControl
@@ -116,13 +134,31 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
 						<SelectControl
@@ -134,13 +170,31 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
 						<SelectControl
@@ -152,15 +206,38 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
+					</PanelBody>
+					<PanelBody
+						title={ __( 'Margin Settings', 'oleti' ) }
+						initialOpen={ false }
+					>
 						<SelectControl
 							label={ __( 'Margin Top' ) }
 							value={ marginTop }
@@ -170,13 +247,31 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
 						<SelectControl
@@ -188,13 +283,31 @@ class Inspector extends Component {
 								} )
 							}
 							options={ [
-								{ value: 'none', label: 'None' },
-								{ value: 'extra-small', label: 'Extra Small' },
-								{ value: 'small', label: 'Small' },
-								{ value: 'normal', label: 'Normal' },
-								{ value: 'medium', label: 'Medium' },
-								{ value: 'large', label: 'Large' },
-								{ value: 'extra-large', label: 'Extra Large' },
+								{ value: 'none', label: __( 'None', 'oleti' ) },
+								{
+									value: 'extra-small',
+									label: __( 'Extra Small', 'oleti' ),
+								},
+								{
+									value: 'small',
+									label: __( 'Small', 'oleti' ),
+								},
+								{
+									value: 'normal',
+									label: __( 'Normal', 'oleti' ),
+								},
+								{
+									value: 'medium',
+									label: __( 'Medium', 'oleti' ),
+								},
+								{
+									value: 'large',
+									label: __( 'Large', 'oleti' ),
+								},
+								{
+									value: 'extra-large',
+									label: __( 'Extra Large', 'oleti' ),
+								},
 							] }
 						/>
 					</PanelBody>

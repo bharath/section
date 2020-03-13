@@ -13,7 +13,7 @@ const deprecated = [
 		attributes: {
 			align: {
 				type: 'string',
-				default: 'wide',
+				//default: 'wide',
 			},
 			backgroundColor: {
 				type: 'string',
@@ -41,11 +41,11 @@ const deprecated = [
 			},
 			paddingLeft: {
 				type: 'string',
-				default: 'extra-small',
+				default: 'small',
 			},
 			paddingRight: {
 				type: 'string',
-				default: 'extra-small',
+				default: 'small',
 			},
 			marginTop: {
 				type: 'number',

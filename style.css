@@ -10,6 +10,9 @@
 	transition-property: margin, padding;
 }
 
+/* -- Extra Small Spacing
+--------------------------------------------- */
+
 .wp-block-oleti-section.padding-top-extra-small {
 	padding-top: 15px;
 }
@@ -25,6 +28,17 @@
 .wp-block-oleti-section.padding-left-extra-small {
 	padding-left: 15px;
 }
+
+.wp-block-oleti-section.margin-top-extra-small {
+	margin-top: 15px;
+}
+
+.wp-block-oleti-section.margin-bottom-extra-small {
+	margin-bottom: 15px;
+}
+
+/* -- Small Spacing
+--------------------------------------------- */
 
 .wp-block-oleti-section.padding-top-small {
 	padding-top: 30px;
@@ -42,6 +56,17 @@
 	padding-left: 30px;
 }
 
+.wp-block-oleti-section.margin-top-small {
+	margin-top: 30px;
+}
+
+.wp-block-oleti-section.margin-bottom-small {
+	margin-bottom: 30px;
+}
+
+/* -- Normal Spacing
+--------------------------------------------- */
+
 .wp-block-oleti-section.padding-top-normal {
 	padding-top: 45px;
 }
@@ -57,6 +82,17 @@
 .wp-block-oleti-section.padding-left-normal {
 	padding-left: 45px;
 }
+
+.wp-block-oleti-section.margin-top-normal {
+	margin-top: 45px;
+}
+
+.wp-block-oleti-section.margin-bottom-normal {
+	margin-bottom: 45px;
+}
+
+/* -- Medium Spacing
+--------------------------------------------- */
 
 .wp-block-oleti-section.padding-top-medium {
 	padding-top: 60px;
@@ -74,6 +110,17 @@
 	padding-left: 60px;
 }
 
+.wp-block-oleti-section.margin-top-medium {
+	margin-top: 60px;
+}
+
+.wp-block-oleti-section.margin-bottom-medium {
+	margin-bottom: 60px;
+}
+
+/* -- Large Spacing
+--------------------------------------------- */
+
 .wp-block-oleti-section.padding-top-large {
 	padding-top: 75px;
 }
@@ -90,6 +137,17 @@
 	padding-left: 75px;
 }
 
+.wp-block-oleti-section.margin-top-large {
+	margin-top: 75px;
+}
+
+.wp-block-oleti-section.margin-bottom-large {
+	margin-bottom: 75px;
+}
+
+/* -- Extra Large Spacing
+--------------------------------------------- */
+
 .wp-block-oleti-section.padding-top-extra-large {
 	padding-top: 100px;
 }
@@ -104,46 +162,6 @@
 
 .wp-block-oleti-section.padding-left-extra-large {
 	padding-left: 100px;
-}
-
-.wp-block-oleti-section.margin-top-extra-small {
-	margin-top: 15px;
-}
-
-.wp-block-oleti-section.margin-bottom-extra-small {
-	margin-bottom: 15px;
-}
-
-.wp-block-oleti-section.margin-top-small {
-	margin-top: 30px;
-}
-
-.wp-block-oleti-section.margin-bottom-small {
-	margin-bottom: 30px;
-}
-
-.wp-block-oleti-section.margin-top-normal {
-	margin-top: 45px;
-}
-
-.wp-block-oleti-section.margin-bottom-normal {
-	margin-bottom: 45px;
-}
-
-.wp-block-oleti-section.margin-top-medium {
-	margin-top: 60px;
-}
-
-.wp-block-oleti-section.margin-bottom-medium {
-	margin-bottom: 60px;
-}
-
-.wp-block-oleti-section.margin-top-large {
-	margin-top: 75px;
-}
-
-.wp-block-oleti-section.margin-bottom-large {
-	margin-bottom: 75px;
 }
 
 .wp-block-oleti-section.margin-top-extra-large {

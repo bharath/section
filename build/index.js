@@ -385,8 +385,8 @@ __webpack_require__.r(__webpack_exports__);
 var deprecated = [{
   attributes: {
     align: {
-      type: 'string',
-      default: 'wide'
+      type: 'string' //default: 'wide',
+
     },
     backgroundColor: {
       type: 'string'
@@ -414,11 +414,11 @@ var deprecated = [{
     },
     paddingLeft: {
       type: 'string',
-      default: 'extra-small'
+      default: 'small'
     },
     paddingRight: {
       type: 'string',
-      default: 'extra-small'
+      default: 'small'
     },
     marginTop: {
       type: 'number',
@@ -718,8 +718,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
   // Specifying block attributes
   attributes: {
     align: {
-      type: 'string',
-      default: 'wide'
+      type: 'string' //default: 'wide',
+
     },
     backgroundColor: {
       type: 'string'
@@ -747,11 +747,11 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
     },
     paddingLeft: {
       type: 'string',
-      default: 'extra-small'
+      default: 'small'
     },
     paddingRight: {
       type: 'string',
-      default: 'extra-small'
+      default: 'small'
     },
     marginTop: {
       type: 'number',
@@ -958,7 +958,7 @@ var Inspector = /*#__PURE__*/function (_Component) {
         fallbackTextColor: fallbackTextColor,
         fallbackBackgroundColor: fallbackBackgroundColor
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Spacing', 'oleti'),
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Padding Settings', 'oleti'),
         initialOpen: false
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Padding Top'),
@@ -970,25 +970,25 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Padding Right'),
@@ -1000,25 +1000,25 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Padding Bottom'),
@@ -1030,25 +1030,25 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Padding Left'),
@@ -1060,27 +1060,30 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
+      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelBody"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Margin Settings', 'oleti'),
+        initialOpen: false
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Margin Top'),
         value: marginTop,
         onChange: function onChange(newMarginTop) {
@@ -1090,25 +1093,25 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
       }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["SelectControl"], {
         label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Margin Bottom'),
@@ -1120,25 +1123,25 @@ var Inspector = /*#__PURE__*/function (_Component) {
         },
         options: [{
           value: 'none',
-          label: 'None'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('None', 'oleti')
         }, {
           value: 'extra-small',
-          label: 'Extra Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Small', 'oleti')
         }, {
           value: 'small',
-          label: 'Small'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Small', 'oleti')
         }, {
           value: 'normal',
-          label: 'Normal'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Normal', 'oleti')
         }, {
           value: 'medium',
-          label: 'Medium'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Medium', 'oleti')
         }, {
           value: 'large',
-          label: 'Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Large', 'oleti')
         }, {
           value: 'extra-large',
-          label: 'Extra Large'
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Extra Large', 'oleti')
         }]
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_5__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_9__["PanelBody"], {
         title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_6__["__"])('Layout', 'oleti'),

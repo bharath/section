@@ -79,7 +79,7 @@ registerBlockType( 'oleti/section', {
 	attributes: {
 		align: {
 			type: 'string',
-			default: 'wide',
+			//default: 'wide',
 		},
 		backgroundColor: {
 			type: 'string',
@@ -107,11 +107,11 @@ registerBlockType( 'oleti/section', {
 		},
 		paddingLeft: {
 			type: 'string',
-			default: 'extra-small',
+			default: 'small',
 		},
 		paddingRight: {
 			type: 'string',
-			default: 'extra-small',
+			default: 'small',
 		},
 		marginTop: {
 			type: 'number',
