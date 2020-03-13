@@ -33,6 +33,6 @@
 	margin-bottom: -32px;
 }
 
-.block-editor-block-list__layout .block-editor-block-list__block.has-child-selected > .block-editor-block-list__block-edit > [data-block] > div > .wp-block-oleti-section__inner-container > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block:not(.is-selected) > .block-editor-block-list__block-edit:before {
-    border: 1px dashed rgba(123,134,162,.3);
+.block-editor-block-list__layout .block-editor-block-list__block.has-child-selected > .block-editor-block-list__block-edit > [data-block] > div > .wp-block-oleti-section__inner-container > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block:not(.is-selected) > .block-editor-block-list__block-edit::before {
+	border: 1px dashed rgba(123, 134, 162, 0.3);
 }
