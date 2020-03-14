@@ -3,8 +3,11 @@
 ## Features
 
 Background Image with Fixed background and Focal point picker options
+
 Background Video
+
 Spacing options
+
 HTML Tag options
 
 ## Requirements
