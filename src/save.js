@@ -8,6 +8,12 @@ import classnames from 'classnames';
  */
 import { InnerBlocks, getColorClassName } from '@wordpress/block-editor';
 
+import {
+	IMAGE_BACKGROUND_TYPE,
+	VIDEO_BACKGROUND_TYPE,
+	backgroundImageStyles,
+} from './shared';
+
 export default function save( { className, attributes } ) {
 	const {
 		backgroundColor,
@@ -15,6 +21,10 @@ export default function save( { className, attributes } ) {
 		textColor,
 		customTextColor,
 		tagName,
+		url,
+		backgroundType,
+		focalPoint,
+		hasParallax,
 	} = attributes;
 
 	const CustomTag = `${ tagName }`;
@@ -45,15 +55,30 @@ export default function save( { className, attributes } ) {
 		[ `padding-left-${ attributes.paddingLeft }` ]: hasPaddingLeft,
 		[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 		[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
+		'has-parallax': hasParallax,
 	} );
 
-	const styles = {
-		backgroundColor: backgroundClass ? undefined : customBackgroundColor,
-		color: textClass ? undefined : customTextColor,
-	};
+	const style =
+		backgroundType === IMAGE_BACKGROUND_TYPE
+			? backgroundImageStyles( url )
+			: {};
+	if ( focalPoint && ! hasParallax ) {
+		style.backgroundPosition = `${ Math.round(
+			focalPoint.x * 100
+		) }% ${ Math.round( focalPoint.y * 100 ) }%`;
+	}
 
 	return (
-		<CustomTag className={ classes } style={ styles }>
+		<CustomTag className={ classes } style={ style }>
+			{ VIDEO_BACKGROUND_TYPE === backgroundType && url && (
+				<video
+					className="wp-block-section__video-background"
+					autoPlay
+					muted
+					loop
+					src={ url }
+				/>
+			) }
 			<div className="wp-block-oleti-section__inner-container">
 				<InnerBlocks.Content />
 			</div>

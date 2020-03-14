@@ -4,6 +4,10 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.wp-block-oleti-section {
+	display: block;
+}
+
 /* Structure --------------------------------- */
 
 .wp-block .wp-block[data-type="oleti/section"]:not([data-align="full"]):not([data-align="wide"]):not([data-align="left"]):not([data-align="right"]) {

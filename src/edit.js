@@ -16,6 +16,12 @@ import { withColors, InnerBlocks } from '@wordpress/block-editor';
  */
 import Inspector from './inspector';
 
+import {
+	IMAGE_BACKGROUND_TYPE,
+	VIDEO_BACKGROUND_TYPE,
+	backgroundImageStyles,
+} from './shared';
+
 class SectionEdit extends Component {
 	render() {
 		const {
@@ -29,12 +35,10 @@ class SectionEdit extends Component {
 
 		const {
 			tagName,
-			paddingTop,
-			paddingRight,
-			paddingBottom,
-			paddingLeft,
-			marginTop,
-			marginBottom,
+			url,
+			backgroundType,
+			focalPoint,
+			hasParallax,
 		} = attributes;
 
 		const CustomTag = `${ tagName }`;
@@ -60,23 +64,42 @@ class SectionEdit extends Component {
 			[ `padding-left-${ attributes.paddingLeft }` ]: hasPaddingLeft,
 			[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 			[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
+			'has-parallax': hasParallax,
 		} );
 
-		const styles = {
-			backgroundColor: backgroundColor.color,
-			color: textColor.color,
-			paddingTop: paddingTop ? paddingTop + 'px' : undefined,
-			paddingRight: paddingRight ? paddingRight + 'px' : undefined,
-			paddingBottom: paddingBottom ? paddingBottom + 'px' : undefined,
-			paddingLeft: paddingLeft ? paddingLeft + 'px' : undefined,
-			marginTop: marginTop ? marginTop + 'px' : undefined,
-			marginBottom: marginBottom ? marginBottom + 'px' : undefined,
-		};
+		const style =
+			backgroundType === IMAGE_BACKGROUND_TYPE
+				? backgroundImageStyles( url )
+				: {};
+		if ( focalPoint && ! hasParallax ) {
+			style.backgroundPosition = `${ Math.round(
+				focalPoint.x * 100
+			) }% ${ Math.round( focalPoint.y * 100 ) }%`;
+		}
 
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTag className={ classes } style={ styles }>
+				<CustomTag className={ classes } style={ style }>
+					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
+						<img
+							aria-hidden
+							alt=""
+							style={ {
+								display: 'none',
+							} }
+							src={ url }
+						/>
+					) }
+					{ VIDEO_BACKGROUND_TYPE === backgroundType && url && (
+						<video
+							className="wp-block-section__video-background"
+							autoPlay
+							muted
+							loop
+							src={ url }
+						/>
+					) }
 					<div className="wp-block-oleti-section__inner-container">
 						<InnerBlocks
 							renderAppender={

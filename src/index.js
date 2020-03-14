@@ -18,7 +18,7 @@ import { __ } from '@wordpress/i18n';
 import deprecated from './deprecated';
 import edit from './edit';
 import save from './save';
-import icon from './icon';
+import icons from './icons';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -51,7 +51,9 @@ registerBlockType( 'oleti/section', {
 	 * An icon property should be specified to make it easier to identify a block.
 	 * These can be any of WordPress’ Dashicons, or a custom svg element.
 	 */
-	icon,
+	icon: {
+		src: icons.section,
+	},
 
 	/**
 	 * Optional block extended support features.
@@ -120,6 +122,23 @@ registerBlockType( 'oleti/section', {
 		marginBottom: {
 			type: 'number',
 			default: 'none',
+		},
+		url: {
+			type: 'string',
+		},
+		id: {
+			type: 'number',
+		},
+		hasParallax: {
+			type: 'boolean',
+			default: false,
+		},
+		backgroundType: {
+			type: 'string',
+			default: 'image',
+		},
+		focalPoint: {
+			type: 'object',
 		},
 	},
 

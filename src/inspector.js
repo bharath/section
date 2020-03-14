@@ -9,13 +9,33 @@ import {
 	ContrastChecker,
 	PanelColorSettings,
 	withColors,
+	BlockControls,
+	MediaReplaceFlow,
+	MediaUpload,
+	MediaUploadCheck,
 } from '@wordpress/block-editor';
 
 import {
 	PanelBody,
 	withFallbackStyles,
 	SelectControl,
+	ToggleControl,
+	FocalPointPicker,
+	PanelRow,
+	Button,
+	IconButton,
+	Toolbar,
 } from '@wordpress/components';
+
+import icons from './icons';
+
+import {
+	attributesFromMedia,
+	IMAGE_BACKGROUND_TYPE,
+	VIDEO_BACKGROUND_TYPE,
+} from './shared';
+
+const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
 
 const { getComputedStyle } = window;
 
@@ -56,11 +76,125 @@ class Inspector extends Component {
 			paddingLeft,
 			marginTop,
 			marginBottom,
+			id,
+			url,
+			backgroundType,
+			focalPoint,
+			hasParallax,
 		} = attributes;
+
+		const onSelectMedia = attributesFromMedia( setAttributes );
+
+		const toggleParallax = () => {
+			setAttributes( {
+				hasParallax: ! hasParallax,
+				...( ! hasParallax ? { focalPoint: undefined } : {} ),
+			} );
+		};
 
 		return (
 			<Fragment>
+				<BlockControls>
+					{ !! url && (
+						<MediaReplaceFlow
+							mediaId={ id }
+							mediaURL={ url }
+							allowedTypes={ ALLOWED_MEDIA_TYPES }
+							accept="image/*,video/*"
+							onSelect={ onSelectMedia }
+						/>
+					) }
+					{ ! url && (
+						<Toolbar>
+							<MediaUploadCheck>
+								<MediaUpload
+									onSelect={ onSelectMedia }
+									allowedTypes={ ALLOWED_MEDIA_TYPES }
+									value={ backgroundType }
+									render={ ( { open } ) => (
+										<IconButton
+											className="components-toolbar__control"
+											label={ __(
+												'Add background',
+												'oleti'
+											) }
+											icon={ icons.sectionImage }
+											onClick={ open }
+										/>
+									) }
+								/>
+							</MediaUploadCheck>
+						</Toolbar>
+					) }
+				</BlockControls>
 				<InspectorControls>
+					{ ! url && (
+						<PanelBody title={ __( 'Media', 'oleti' ) }>
+							<MediaUploadCheck>
+								<MediaUpload
+									onSelect={ onSelectMedia }
+									allowedTypes={ ALLOWED_MEDIA_TYPES }
+									value={ backgroundType }
+									render={ ( { open } ) => (
+										<Button
+											className="section-background-image__toggle"
+											onClick={ open }
+										>
+											{ __( 'Add background', 'oleti' ) }
+										</Button>
+									) }
+								/>
+							</MediaUploadCheck>
+						</PanelBody>
+					) }
+					{ !! url && (
+						<PanelBody title={ __( 'Media settings', 'oleti' ) }>
+							{ IMAGE_BACKGROUND_TYPE === backgroundType && (
+								<ToggleControl
+									label={ __( 'Fixed background', 'oleti' ) }
+									checked={ hasParallax }
+									onChange={ toggleParallax }
+								/>
+							) }
+							{ IMAGE_BACKGROUND_TYPE === backgroundType &&
+								! hasParallax && (
+									<FocalPointPicker
+										label={ __(
+											'Focal point picker',
+											'oleti'
+										) }
+										url={ url }
+										value={ focalPoint }
+										onChange={ ( newFocalPoint ) =>
+											setAttributes( {
+												focalPoint: newFocalPoint,
+											} )
+										}
+									/>
+								) }
+							{ VIDEO_BACKGROUND_TYPE === backgroundType && (
+								<video autoPlay muted loop src={ url } />
+							) }
+							<PanelRow>
+								<Button
+									isSecondary
+									isSmall
+									className="block-library-section__reset-button"
+									onClick={ () =>
+										setAttributes( {
+											url: undefined,
+											id: undefined,
+											backgroundType: undefined,
+											focalPoint: undefined,
+											hasParallax: undefined,
+										} )
+									}
+								>
+									{ __( 'Clear Media' ) }
+								</Button>
+							</PanelRow>
+						</PanelBody>
+					) }
 					<PanelColorSettings
 						title={ __( 'Color Settings', 'oleti' ) }
 						colorSettings={ [
@@ -86,7 +220,7 @@ class Inspector extends Component {
 						/>
 					</PanelColorSettings>
 					<PanelBody
-						title={ __( 'Padding Settings', 'oleti' ) }
+						title={ __( 'Spacing', 'oleti' ) }
 						initialOpen={ false }
 					>
 						<SelectControl
@@ -233,11 +367,6 @@ class Inspector extends Component {
 								},
 							] }
 						/>
-					</PanelBody>
-					<PanelBody
-						title={ __( 'Margin Settings', 'oleti' ) }
-						initialOpen={ false }
-					>
 						<SelectControl
 							label={ __( 'Margin Top' ) }
 							value={ marginTop }
