@@ -1,13 +1,22 @@
 /**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+* The following styles get applied both on the front of your site
+* and in the editor.
+*
+* Replace them with your own styles or remove the file completely.
+*/
 
 .wp-block-oleti-section {
 	transition: 0.2s ease-out;
 	transition-property: margin, padding;
+	position: relative;
+	background-size: cover;
+	background-position: 50%;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
 
 /* -- Extra Small Spacing
@@ -170,4 +179,21 @@
 
 .wp-block-oleti-section.margin-bottom-extra-large {
 	margin-bottom: 100px;
+}
+
+/* -- Background Overlay
+--------------------------------------------- */
+
+.section-background-image__toggle {
+	box-shadow: inset 0 0 0 1px #007cba;
+	outline: 1px solid transparent;
+	white-space: nowrap;
+	color: #007cba;
+	background: transparent;
+	display: block;
+	width: 100%;
+}
+
+.has-parallax {
+	background-attachment: fixed;
 }
