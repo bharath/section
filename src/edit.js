@@ -80,7 +80,7 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTag className={ classes } style={ style }>
+				<CustomTag data-url={ url }  className={ classes } style={ style }>
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img
 							aria-hidden

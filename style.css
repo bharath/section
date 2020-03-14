@@ -11,12 +11,7 @@
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+
 }
 
 /* -- Extra Small Spacing
@@ -196,4 +191,8 @@
 
 .has-parallax {
 	background-attachment: fixed;
+}
+
+.wp-block-oleti-section:before {
+	opacity: 0.5;
 }
