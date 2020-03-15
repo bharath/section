@@ -1,0 +1,281 @@
+# Copyright (C) 2020 Bharath
+# This file is distributed under the same license as the Section plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Section 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/section\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-03-15T12:04:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: oleti\n"
+
+#. Plugin Name of the plugin
+#: build/index.js:6
+#: src/index.js:33
+msgid "Section"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/bharath/section"
+msgstr ""
+
+#. Description of the plugin
+#: build/index.js:6
+#: src/index.js:39
+msgid "A Gutenberg block that allows you to add other blocks inside."
+msgstr ""
+
+#. Author of the plugin
+msgid "Bharath"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://bharath.dev"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:119
+#: src/inspector.js:145
+msgid "Add background"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:134
+msgid "Media"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:153
+msgid "Media settings"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:156
+msgid "Fixed background"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:164
+msgid "Focal point picker"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:195
+msgid "Clear Media"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:201
+msgid "Color Settings"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:206
+msgid "Background Color"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:211
+msgid "Text Color"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:217
+msgid "Background Color opacity"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:242
+msgid "Spacing"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:246
+msgid "Padding Top"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:254
+#: src/inspector.js:290
+#: src/inspector.js:326
+#: src/inspector.js:362
+#: src/inspector.js:398
+#: src/inspector.js:434
+msgid "None"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:257
+#: src/inspector.js:293
+#: src/inspector.js:329
+#: src/inspector.js:365
+#: src/inspector.js:401
+#: src/inspector.js:437
+msgid "Extra Small"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:261
+#: src/inspector.js:297
+#: src/inspector.js:333
+#: src/inspector.js:369
+#: src/inspector.js:405
+#: src/inspector.js:441
+msgid "Small"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:265
+#: src/inspector.js:301
+#: src/inspector.js:337
+#: src/inspector.js:373
+#: src/inspector.js:409
+#: src/inspector.js:445
+msgid "Normal"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:269
+#: src/inspector.js:305
+#: src/inspector.js:341
+#: src/inspector.js:377
+#: src/inspector.js:413
+#: src/inspector.js:449
+msgid "Medium"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:273
+#: src/inspector.js:309
+#: src/inspector.js:345
+#: src/inspector.js:381
+#: src/inspector.js:417
+#: src/inspector.js:453
+msgid "Large"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:277
+#: src/inspector.js:313
+#: src/inspector.js:349
+#: src/inspector.js:385
+#: src/inspector.js:421
+#: src/inspector.js:457
+msgid "Extra Large"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:282
+msgid "Padding Right"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:318
+msgid "Padding Bottom"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:354
+msgid "Padding Left"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:390
+msgid "Margin Top"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:426
+msgid "Margin Bottom"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:463
+msgid "Layout"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:467
+msgid "HTML Tag"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:477
+msgid "article"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:481
+msgid "aside"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:485
+msgid "div"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:489
+msgid "footer"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:493
+msgid "header"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:497
+msgid "main"
+msgstr ""
+
+#: build/index.js:6
+#: src/inspector.js:501
+msgid "nav"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:73
+#: src/inspector.js:505
+msgid "section"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:74
+msgid "group"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:75
+msgid "container"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:76
+msgid "row"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:77
+msgid "wrapper"
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:160
+msgid "One."
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:168
+msgid "Two."
+msgstr ""
+
+#: build/index.js:6
+#: src/index.js:176
+msgid "Three."
+msgstr ""
