@@ -5,15 +5,6 @@
 * Replace them with your own styles or remove the file completely.
 */
 
-.wp-block-oleti-section {
-	transition: 0.2s ease-out;
-	transition-property: margin, padding;
-	position: relative;
-	background-size: cover;
-	background-position: 50%;
-
-}
-
 /* -- Extra Small Spacing
 --------------------------------------------- */
 
@@ -189,10 +180,103 @@
 	width: 100%;
 }
 
-.has-parallax {
+.wp-block-oleti-section {
+	transition: 0.2s ease-out;
+	transition-property: margin, padding;
+	position: relative;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.wp-block-oleti-section.has-parallax {
 	background-attachment: fixed;
 }
 
-.wp-block-oleti-section:before {
+@supports (-webkit-overflow-scrolling:touch) {
+
+	.wp-block-oleti-section.has-parallax {
+		background-attachment: scroll;
+	}
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.wp-block-oleti-section.has-parallax {
+		background-attachment: scroll;
+	}
+
+}
+
+.wp-block-oleti-section.has-background-overlay::before {
+	content: "";
+	background-color: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	opacity: 0.5;
+}
+
+.wp-block-oleti-section.has-background-overlay-10::before {
+	opacity: 0.1;
+}
+
+.wp-block-oleti-section.has-background-overlay-20::before {
+	opacity: 0.2;
+}
+
+.wp-block-oleti-section.has-background-overlay-30::before {
+	opacity: 0.3;
+}
+
+.wp-block-oleti-section.has-background-overlay-40::before {
+	opacity: 0.4;
+}
+
+.wp-block-oleti-section.has-background-overlay-50::before {
+	opacity: 0.5;
+}
+
+.wp-block-oleti-section.has-background-overlay-60::before {
+	opacity: 0.6;
+}
+
+.wp-block-oleti-section.has-background-overlay-70::before {
+	opacity: 0.7;
+}
+
+.wp-block-oleti-section.has-background-overlay-80::before {
+	opacity: 0.8;
+}
+
+.wp-block-oleti-section.has-background-overlay-90::before {
+	opacity: 0.9;
+}
+
+.wp-block-oleti-section.has-background-overlay-100::before {
+	opacity: 1;
+}
+
+
+.wp-block-oleti-section::after {
+	display: block;
+	content: "";
+	font-size: 0;
+	min-height: inherit;
+}
+
+@supports ((position: -webkit-sticky) or (position:sticky)) {
+
+	.wp-block-oleti-section::after {
+		content: none;
+	}
+
+}
+
+.wp-block-oleti-section .wp-block-oleti-section__inner-container {
+	width: calc(100% - 70px);
+	position: relative;
+	margin: 0 auto;
 }

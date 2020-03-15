@@ -48,6 +48,7 @@ class SectionEdit extends Component {
 		const hasPaddingLeft = !! attributes.paddingLeft;
 		const hasMarginTop = !! attributes.marginTop;
 		const hasMarginBottom = !! attributes.marginBottom;
+		const hasBgOpacity = !! attributes.bgOpacity;
 
 		const classes = classnames( className, {
 			'has-background': backgroundColor.color,
@@ -65,6 +66,8 @@ class SectionEdit extends Component {
 			[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 			[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 			'has-parallax': hasParallax,
+			[ `has-background-overlay-${ attributes.bgOpacity }` ]: hasBgOpacity,
+			'has-background-overlay': hasBgOpacity,
 		} );
 
 		const style =
@@ -80,7 +83,11 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTag data-url={ url }  className={ classes } style={ style }>
+				<CustomTag
+					data-url={ url }
+					className={ classes }
+					style={ style }
+				>
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img
 							aria-hidden

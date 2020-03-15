@@ -25,6 +25,7 @@ import {
 	Button,
 	IconButton,
 	Toolbar,
+	RangeControl,
 } from '@wordpress/components';
 
 import icons from './icons';
@@ -81,6 +82,7 @@ class Inspector extends Component {
 			backgroundType,
 			focalPoint,
 			hasParallax,
+			bgOpacity,
 		} = attributes;
 
 		const onSelectMedia = attributesFromMedia( setAttributes );
@@ -210,6 +212,20 @@ class Inspector extends Component {
 							},
 						] }
 					>
+						{ !! url && (
+							<RangeControl
+								label={ __( 'Background Color opacity' ) }
+								value={ bgOpacity }
+								onChange={ ( newBgOpacity ) =>
+									setAttributes( {
+										bgOpacity: newBgOpacity,
+									} )
+								}
+								min={ 0 }
+								max={ 100 }
+								step={ 10 }
+							/>
+						) }
 						<ContrastChecker
 							{ ...{
 								textColor: textColor.color,

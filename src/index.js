@@ -109,11 +109,11 @@ registerBlockType( 'oleti/section', {
 		},
 		paddingLeft: {
 			type: 'string',
-			default: 'small',
+			default: 'none',
 		},
 		paddingRight: {
 			type: 'string',
-			default: 'small',
+			default: 'none',
 		},
 		marginTop: {
 			type: 'number',
@@ -139,6 +139,26 @@ registerBlockType( 'oleti/section', {
 		},
 		focalPoint: {
 			type: 'object',
+		},
+		bgOpacity: {
+			type: 'number',
+			default: 50,
+		},
+		dimRatio: {
+			type: 'number',
+			default: 50,
+		},
+		overlayColor: {
+			type: 'string',
+		},
+		customOverlayColor: {
+			type: 'string',
+		},
+		gradient: {
+			type: 'string',
+		},
+		customGradient: {
+			type: 'string',
 		},
 	},
 
