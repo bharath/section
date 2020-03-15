@@ -2,13 +2,15 @@
 
 ## Features
 
-Background Image with Fixed background and Focal point picker options
-
-Background Video
-
-Spacing options
-
-HTML Tag options
+- Background Image
+ 	- Fixed background
+ 	- Focal point picker
+- Background Color
+- Background Color Overlay
+- Text Color
+- Background Video
+- Spacing options
+- HTML Tag options
 
 ## Requirements
 
