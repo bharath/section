@@ -120,7 +120,7 @@ class Inspector extends Component {
 												'Add background',
 												'oleti'
 											) }
-											icon={ icons.sectionImage }
+											icon={ icons.sectionMedia }
 											onClick={ open }
 										/>
 									) }

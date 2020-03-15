@@ -100,7 +100,7 @@ class SectionEdit extends Component {
 					) }
 					{ VIDEO_BACKGROUND_TYPE === backgroundType && url && (
 						<video
-							className="wp-block-section__video-background"
+							className="wp-block-oleti-section__video-background"
 							autoPlay
 							muted
 							loop
