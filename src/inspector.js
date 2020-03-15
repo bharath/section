@@ -214,7 +214,10 @@ class Inspector extends Component {
 					>
 						{ !! url && (
 							<RangeControl
-								label={ __( 'Background Color opacity', 'oleti' ) }
+								label={ __(
+									'Background Color opacity',
+									'oleti'
+								) }
 								value={ bgOpacity }
 								onChange={ ( newBgOpacity ) =>
 									setAttributes( {
