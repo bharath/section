@@ -192,7 +192,7 @@ class Inspector extends Component {
 										} )
 									}
 								>
-									{ __( 'Clear Media' ) }
+									{ __( 'Clear Media', 'oleti' ) }
 								</Button>
 							</PanelRow>
 						</PanelBody>
@@ -214,7 +214,7 @@ class Inspector extends Component {
 					>
 						{ !! url && (
 							<RangeControl
-								label={ __( 'Background Color opacity' ) }
+								label={ __( 'Background Color opacity', 'oleti' ) }
 								value={ bgOpacity }
 								onChange={ ( newBgOpacity ) =>
 									setAttributes( {
@@ -240,7 +240,7 @@ class Inspector extends Component {
 						initialOpen={ false }
 					>
 						<SelectControl
-							label={ __( 'Padding Top' ) }
+							label={ __( 'Padding Top', 'oleti' ) }
 							value={ paddingTop }
 							onChange={ ( newPaddingTop ) =>
 								setAttributes( {
@@ -276,7 +276,7 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
-							label={ __( 'Padding Right' ) }
+							label={ __( 'Padding Right', 'oleti' ) }
 							value={ paddingRight }
 							onChange={ ( newPaddingRight ) =>
 								setAttributes( {
@@ -312,7 +312,7 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
-							label={ __( 'Padding Bottom' ) }
+							label={ __( 'Padding Bottom', 'oleti' ) }
 							value={ paddingBottom }
 							onChange={ ( newPaddingBottom ) =>
 								setAttributes( {
@@ -348,7 +348,7 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
-							label={ __( 'Padding Left' ) }
+							label={ __( 'Padding Left', 'oleti' ) }
 							value={ paddingLeft }
 							onChange={ ( newPaddingLeft ) =>
 								setAttributes( {
@@ -384,7 +384,7 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
-							label={ __( 'Margin Top' ) }
+							label={ __( 'Margin Top', 'oleti' ) }
 							value={ marginTop }
 							onChange={ ( newMarginTop ) =>
 								setAttributes( {
@@ -420,7 +420,7 @@ class Inspector extends Component {
 							] }
 						/>
 						<SelectControl
-							label={ __( 'Margin Bottom' ) }
+							label={ __( 'Margin Bottom', 'oleti' ) }
 							value={ marginBottom }
 							onChange={ ( newMarginBottom ) =>
 								setAttributes( {

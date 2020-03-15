@@ -144,22 +144,6 @@ registerBlockType( 'oleti/section', {
 			type: 'number',
 			default: 50,
 		},
-		dimRatio: {
-			type: 'number',
-			default: 50,
-		},
-		overlayColor: {
-			type: 'string',
-		},
-		customOverlayColor: {
-			type: 'string',
-		},
-		gradient: {
-			type: 'string',
-		},
-		customGradient: {
-			type: 'string',
-		},
 	},
 
 	example: {
@@ -173,7 +157,7 @@ registerBlockType( 'oleti/section', {
 				attributes: {
 					customTextColor: '#cf2e2e',
 					fontSize: 'large',
-					content: __( 'One.' ),
+					content: __( 'One.', 'oleti' ),
 				},
 			},
 			{
@@ -181,7 +165,7 @@ registerBlockType( 'oleti/section', {
 				attributes: {
 					customTextColor: '#ff6900',
 					fontSize: 'large',
-					content: __( 'Two.' ),
+					content: __( 'Two.', 'oleti' ),
 				},
 			},
 			{
@@ -189,7 +173,7 @@ registerBlockType( 'oleti/section', {
 				attributes: {
 					customTextColor: '#fcb900',
 					fontSize: 'large',
-					content: __( 'Three.' ),
+					content: __( 'Three.', 'oleti' ),
 				},
 			},
 		],

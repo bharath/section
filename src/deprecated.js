@@ -78,6 +78,10 @@ const deprecated = [
 			focalPoint: {
 				type: 'object',
 			},
+			bgOpacity: {
+				type: 'number',
+				default: 50,
+			},
 		},
 
 		supports: {
@@ -113,6 +117,7 @@ const deprecated = [
 			const hasPaddingLeft = !! attributes.paddingLeft;
 			const hasMarginTop = !! attributes.marginTop;
 			const hasMarginBottom = !! attributes.marginBottom;
+			const hasBgOpacity = !! attributes.bgOpacity;
 
 			const classes = classnames( className, backgroundClass, textClass, {
 				'has-text-color': textColor || customTextColor,
@@ -128,6 +133,8 @@ const deprecated = [
 				[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
 				[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 				'has-parallax': hasParallax,
+				[ `has-background-overlay-${ attributes.bgOpacity }` ]: hasBgOpacity,
+				'has-background-overlay': hasBgOpacity,
 			} );
 
 			const style =
