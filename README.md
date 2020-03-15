@@ -14,7 +14,7 @@
 
 ## Requirements
 
-7.7.1 version of [Gutenberg](https://github.com/WordPress/gutenberg) plugin needs to be installed.
+Tested with 5.4-RC2-47447 and 7.7.1 version of [Gutenberg](https://github.com/WordPress/gutenberg) plugin.
 
 ## Bugs
 
