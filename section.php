@@ -66,3 +66,16 @@ function oleti_section_block_init() {
 	) );
 }
 add_action( 'init', 'oleti_section_block_init' );
+
+function oleti_section_block_sidebar_plugin_register() {
+	wp_register_style(
+		'oleti-section-block-sidebar-plugin-style',
+		plugins_url( 'section-sidebar.css', __FILE__ )
+	);
+}
+add_action( 'init', 'oleti_section_block_sidebar_plugin_register' );
+
+function oleti_section_block_sidebar_plugin_style_enqueue() {
+	wp_enqueue_style( 'oleti-section-block-sidebar-plugin-style' );
+}
+add_action( 'enqueue_block_assets', 'oleti_section_block_sidebar_plugin_style_enqueue' );

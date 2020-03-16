@@ -12,6 +12,11 @@ import { registerBlockType, createBlock } from '@wordpress/blocks';
  */
 import { __ } from '@wordpress/i18n';
 
+import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
+import { registerPlugin } from '@wordpress/plugins';
+import { __experimentalBlockPatterns as BlockPatternsList } from '@wordpress/block-editor';
+import { useSelect } from '@wordpress/data';
+
 /**
  * Internal dependencies
  */
@@ -262,4 +267,26 @@ registerBlockType( 'oleti/section', {
 	save,
 
 	deprecated,
+} );
+
+registerPlugin( 'section-sidebar', {
+	icon: icons.section,
+	render() {
+		return (
+			<>
+				<PluginSidebarMoreMenuItem
+					target="sidebar-name"
+				>
+					Section Block Options
+				</PluginSidebarMoreMenuItem>
+				<PluginSidebar
+					name="sidebar-name"
+					title="Section Block Options"
+				>
+					Content of the sidebar
+					hi
+				</PluginSidebar>
+			</>
+		)
+	}
 } );
