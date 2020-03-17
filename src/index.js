@@ -14,8 +14,7 @@ import { __ } from '@wordpress/i18n';
 
 import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
 import { registerPlugin } from '@wordpress/plugins';
-import { __experimentalBlockPatterns as BlockPatternsList } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
+import { PanelBody } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -269,24 +268,29 @@ registerBlockType( 'oleti/section', {
 	deprecated,
 } );
 
+const SectionSidebar = () => (
+	<>
+		<PluginSidebarMoreMenuItem target="sidebar-name">
+			Section Block Options
+		</PluginSidebarMoreMenuItem>
+		<PluginSidebar
+			name="sidebar-name"
+			title={ __( 'Section Block Options', 'oleti' ) }
+		>
+			<PanelBody>
+				{ __( 'Patterns', 'oleti' ) }
+			</PanelBody>
+			<PanelBody>
+				{ __( 'Colors', 'oleti' ) }
+			</PanelBody>
+			<PanelBody>
+				{ __( 'Spacing', 'oleti' ) }
+			</PanelBody>
+		</PluginSidebar>
+	</>
+);
+
 registerPlugin( 'section-sidebar', {
 	icon: icons.section,
-	render() {
-		return (
-			<>
-				<PluginSidebarMoreMenuItem
-					target="sidebar-name"
-				>
-					Section Block Options
-				</PluginSidebarMoreMenuItem>
-				<PluginSidebar
-					name="sidebar-name"
-					title="Section Block Options"
-				>
-					Content of the sidebar
-					hi
-				</PluginSidebar>
-			</>
-		)
-	}
+	render: SectionSidebar,
 } );
