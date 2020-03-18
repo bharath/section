@@ -271,20 +271,29 @@ registerBlockType( 'oleti/section', {
 const SectionSidebar = () => (
 	<>
 		<PluginSidebarMoreMenuItem target="sidebar-name">
-			Section Block Options
+			{ __( 'Section Block Options', 'oleti' ) }
 		</PluginSidebarMoreMenuItem>
 		<PluginSidebar
 			name="sidebar-name"
 			title={ __( 'Section Block Options', 'oleti' ) }
 		>
-			<PanelBody>
-				{ __( 'Patterns', 'oleti' ) }
+			<PanelBody title={ __( 'Info', 'oleti' ) }>
+				{ __(
+					'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+					'oleti'
+				) }
 			</PanelBody>
-			<PanelBody>
-				{ __( 'Colors', 'oleti' ) }
+			<PanelBody title={ __( 'Info 2', 'oleti' ) } initialOpen={ false }>
+				{ __(
+					'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+					'oleti'
+				) }
 			</PanelBody>
-			<PanelBody>
-				{ __( 'Spacing', 'oleti' ) }
+			<PanelBody title={ __( 'Info 3', 'oleti' ) } initialOpen={ false }>
+				{ __(
+					'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+					'oleti'
+				) }
 			</PanelBody>
 		</PluginSidebar>
 	</>

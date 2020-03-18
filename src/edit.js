@@ -88,7 +88,7 @@ class SectionEdit extends Component {
 					className={ classes }
 					style={ style }
 				>
-					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
+					{ IMAGE_BACKGROUND_TYPE === backgroundType && url && (
 						<img
 							aria-hidden
 							alt=""

@@ -617,7 +617,7 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
         "data-url": url,
         className: classes,
         style: style
-      }, _shared__WEBPACK_IMPORTED_MODULE_12__["IMAGE_BACKGROUND_TYPE"] === backgroundType && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("img", {
+      }, _shared__WEBPACK_IMPORTED_MODULE_12__["IMAGE_BACKGROUND_TYPE"] === backgroundType && url && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("img", {
         "aria-hidden": true,
         alt: "",
         style: {
@@ -946,10 +946,18 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
 var SectionSidebar = function SectionSidebar() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_3__["PluginSidebarMoreMenuItem"], {
     target: "sidebar-name"
-  }, "Section Block Options"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_3__["PluginSidebar"], {
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Section Block Options', 'oleti')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_3__["PluginSidebar"], {
     name: "sidebar-name",
     title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Section Block Options', 'oleti')
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Patterns', 'oleti')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Colors', 'oleti')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], null, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Spacing', 'oleti'))));
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Info', 'oleti')
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'oleti')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Info 2', 'oleti'),
+    initialOpen: false
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'oleti')), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Info 3', 'oleti'),
+    initialOpen: false
+  }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'oleti'))));
 };
 
 Object(_wordpress_plugins__WEBPACK_IMPORTED_MODULE_4__["registerPlugin"])('section-sidebar', {

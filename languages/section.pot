@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-15T12:36:56+00:00\n"
+"POT-Creation-Date: 2020-03-18T06:11:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: oleti\n"
 
 #. Plugin Name of the plugin
-#: build/index.js:738
-#: src/index.js:33
+#: build/index.js:751
+#: src/index.js:37
 msgid "Section"
 msgstr ""
 
@@ -25,8 +25,8 @@ msgid "https://github.com/bharath/section"
 msgstr ""
 
 #. Description of the plugin
-#: build/index.js:744
-#: src/index.js:39
+#: build/index.js:757
+#: src/index.js:43
 msgid "A Gutenberg block that allows you to add other blocks inside."
 msgstr ""
 
@@ -38,116 +38,147 @@ msgstr ""
 msgid "https://bharath.dev"
 msgstr ""
 
-#: build/index.js:773
-#: build/index.js:1358
-#: src/index.js:73
+#: build/index.js:786
+#: build/index.js:1393
+#: src/index.js:77
 #: src/inspector.js:505
 msgid "section"
 msgstr ""
 
-#: build/index.js:773
-#: src/index.js:74
+#: build/index.js:786
+#: src/index.js:78
 msgid "group"
 msgstr ""
 
-#: build/index.js:773
-#: src/index.js:75
+#: build/index.js:786
+#: src/index.js:79
 msgid "container"
 msgstr ""
 
-#: build/index.js:773
-#: src/index.js:76
+#: build/index.js:786
+#: src/index.js:80
 msgid "row"
 msgstr ""
 
-#: build/index.js:773
-#: src/index.js:77
+#: build/index.js:786
+#: src/index.js:81
 msgid "wrapper"
 msgstr ""
 
-#: build/index.js:852
-#: src/index.js:160
+#: build/index.js:865
+#: src/index.js:164
 msgid "One."
 msgstr ""
 
-#: build/index.js:859
-#: src/index.js:168
+#: build/index.js:872
+#: src/index.js:172
 msgid "Two."
 msgstr ""
 
-#: build/index.js:866
-#: src/index.js:176
+#: build/index.js:879
+#: src/index.js:180
 msgid "Three."
 msgstr ""
 
-#: build/index.js:1063
-#: build/index.js:1079
+#: build/index.js:949
+#: build/index.js:951
+#: src/index.js:274
+#: src/index.js:278
+msgid "Section Block Options"
+msgstr ""
+
+#: build/index.js:953
+#: src/index.js:280
+msgid "Info"
+msgstr ""
+
+#: build/index.js:954
+#: build/index.js:957
+#: build/index.js:960
+#: src/index.js:281
+#: src/index.js:284
+#: src/index.js:287
+msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+msgstr ""
+
+#: build/index.js:955
+#: src/index.js:283
+msgid "Info 2"
+msgstr ""
+
+#: build/index.js:958
+#: src/index.js:286
+msgid "Info 3"
+msgstr ""
+
+#: build/index.js:1098
+#: build/index.js:1114
 #: src/inspector.js:119
 #: src/inspector.js:145
 msgid "Add background"
 msgstr ""
 
-#: build/index.js:1069
+#: build/index.js:1104
 #: src/inspector.js:134
 msgid "Media"
 msgstr ""
 
-#: build/index.js:1082
+#: build/index.js:1117
 #: src/inspector.js:153
 msgid "Media settings"
 msgstr ""
 
-#: build/index.js:1084
+#: build/index.js:1119
 #: src/inspector.js:156
 msgid "Fixed background"
 msgstr ""
 
-#: build/index.js:1088
+#: build/index.js:1123
 #: src/inspector.js:164
 msgid "Focal point picker"
 msgstr ""
 
-#: build/index.js:1114
+#: build/index.js:1149
 #: src/inspector.js:195
 msgid "Clear Media"
 msgstr ""
 
-#: build/index.js:1115
+#: build/index.js:1150
 #: src/inspector.js:201
 msgid "Color Settings"
 msgstr ""
 
-#: build/index.js:1119
+#: build/index.js:1154
 #: src/inspector.js:206
 msgid "Background Color"
 msgstr ""
 
-#: build/index.js:1123
+#: build/index.js:1158
 #: src/inspector.js:211
 msgid "Text Color"
 msgstr ""
 
-#: build/index.js:1126
+#: build/index.js:1161
 #: src/inspector.js:217
 msgid "Background Color opacity"
 msgstr ""
 
-#: build/index.js:1142
+#: build/index.js:1177
 #: src/inspector.js:242
 msgid "Spacing"
 msgstr ""
 
-#: build/index.js:1145
+#: build/index.js:1180
 #: src/inspector.js:246
 msgid "Padding Top"
 msgstr ""
 
-#: build/index.js:1154
-#: build/index.js:1184
-#: build/index.js:1214
-#: build/index.js:1244
-#: build/index.js:1274
-#: build/index.js:1304
+#: build/index.js:1189
+#: build/index.js:1219
+#: build/index.js:1249
+#: build/index.js:1279
+#: build/index.js:1309
+#: build/index.js:1339
 #: src/inspector.js:254
 #: src/inspector.js:290
 #: src/inspector.js:326
@@ -157,12 +188,12 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: build/index.js:1157
-#: build/index.js:1187
-#: build/index.js:1217
-#: build/index.js:1247
-#: build/index.js:1277
-#: build/index.js:1307
+#: build/index.js:1192
+#: build/index.js:1222
+#: build/index.js:1252
+#: build/index.js:1282
+#: build/index.js:1312
+#: build/index.js:1342
 #: src/inspector.js:257
 #: src/inspector.js:293
 #: src/inspector.js:329
@@ -172,12 +203,12 @@ msgstr ""
 msgid "Extra Small"
 msgstr ""
 
-#: build/index.js:1160
-#: build/index.js:1190
-#: build/index.js:1220
-#: build/index.js:1250
-#: build/index.js:1280
-#: build/index.js:1310
+#: build/index.js:1195
+#: build/index.js:1225
+#: build/index.js:1255
+#: build/index.js:1285
+#: build/index.js:1315
+#: build/index.js:1345
 #: src/inspector.js:261
 #: src/inspector.js:297
 #: src/inspector.js:333
@@ -187,12 +218,12 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: build/index.js:1163
-#: build/index.js:1193
-#: build/index.js:1223
-#: build/index.js:1253
-#: build/index.js:1283
-#: build/index.js:1313
+#: build/index.js:1198
+#: build/index.js:1228
+#: build/index.js:1258
+#: build/index.js:1288
+#: build/index.js:1318
+#: build/index.js:1348
 #: src/inspector.js:265
 #: src/inspector.js:301
 #: src/inspector.js:337
@@ -202,12 +233,12 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
-#: build/index.js:1166
-#: build/index.js:1196
-#: build/index.js:1226
-#: build/index.js:1256
-#: build/index.js:1286
-#: build/index.js:1316
+#: build/index.js:1201
+#: build/index.js:1231
+#: build/index.js:1261
+#: build/index.js:1291
+#: build/index.js:1321
+#: build/index.js:1351
 #: src/inspector.js:269
 #: src/inspector.js:305
 #: src/inspector.js:341
@@ -217,12 +248,12 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: build/index.js:1169
-#: build/index.js:1199
-#: build/index.js:1229
-#: build/index.js:1259
-#: build/index.js:1289
-#: build/index.js:1319
+#: build/index.js:1204
+#: build/index.js:1234
+#: build/index.js:1264
+#: build/index.js:1294
+#: build/index.js:1324
+#: build/index.js:1354
 #: src/inspector.js:273
 #: src/inspector.js:309
 #: src/inspector.js:345
@@ -232,12 +263,12 @@ msgstr ""
 msgid "Large"
 msgstr ""
 
-#: build/index.js:1172
-#: build/index.js:1202
-#: build/index.js:1232
-#: build/index.js:1262
-#: build/index.js:1292
-#: build/index.js:1322
+#: build/index.js:1207
+#: build/index.js:1237
+#: build/index.js:1267
+#: build/index.js:1297
+#: build/index.js:1327
+#: build/index.js:1357
 #: src/inspector.js:277
 #: src/inspector.js:313
 #: src/inspector.js:349
@@ -247,72 +278,72 @@ msgstr ""
 msgid "Extra Large"
 msgstr ""
 
-#: build/index.js:1175
+#: build/index.js:1210
 #: src/inspector.js:282
 msgid "Padding Right"
 msgstr ""
 
-#: build/index.js:1205
+#: build/index.js:1240
 #: src/inspector.js:318
 msgid "Padding Bottom"
 msgstr ""
 
-#: build/index.js:1235
+#: build/index.js:1270
 #: src/inspector.js:354
 msgid "Padding Left"
 msgstr ""
 
-#: build/index.js:1265
+#: build/index.js:1300
 #: src/inspector.js:390
 msgid "Margin Top"
 msgstr ""
 
-#: build/index.js:1295
+#: build/index.js:1330
 #: src/inspector.js:426
 msgid "Margin Bottom"
 msgstr ""
 
-#: build/index.js:1325
+#: build/index.js:1360
 #: src/inspector.js:463
 msgid "Layout"
 msgstr ""
 
-#: build/index.js:1328
+#: build/index.js:1363
 #: src/inspector.js:467
 msgid "HTML Tag"
 msgstr ""
 
-#: build/index.js:1337
+#: build/index.js:1372
 #: src/inspector.js:477
 msgid "article"
 msgstr ""
 
-#: build/index.js:1340
+#: build/index.js:1375
 #: src/inspector.js:481
 msgid "aside"
 msgstr ""
 
-#: build/index.js:1343
+#: build/index.js:1378
 #: src/inspector.js:485
 msgid "div"
 msgstr ""
 
-#: build/index.js:1346
+#: build/index.js:1381
 #: src/inspector.js:489
 msgid "footer"
 msgstr ""
 
-#: build/index.js:1349
+#: build/index.js:1384
 #: src/inspector.js:493
 msgid "header"
 msgstr ""
 
-#: build/index.js:1352
+#: build/index.js:1387
 #: src/inspector.js:497
 msgid "main"
 msgstr ""
 
-#: build/index.js:1355
+#: build/index.js:1390
 #: src/inspector.js:501
 msgid "nav"
 msgstr ""

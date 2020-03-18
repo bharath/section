@@ -1,8 +1,8 @@
 {
 	"name": "section",
 	"version": "0.1.0",
-	"description": "Section Block for Gutenberg",
-	"author": "The WordPress Contributors",
+	"description": "A Gutenberg block that allows you to add other blocks inside.",
+	"author": "Bharath",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
@@ -18,7 +18,7 @@
 		"i18n-mo": "for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^7.1.2",
+		"@wordpress/scripts": "^7.1.3",
 		"classnames": "^2.2.6"
 	}
 }
