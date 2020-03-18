@@ -144,6 +144,18 @@ registerBlockType( 'oleti/section', {
 			type: 'number',
 			default: 50,
 		},
+		textColor: {
+				type: 'string',
+			},
+			rgbTextColor: {
+				type: 'string',
+			},
+			backgroundColor: {
+				type: 'string',
+			},
+			rgbBackgroundColor: {
+				type: 'string',
+			},
 	},
 
 	example: {

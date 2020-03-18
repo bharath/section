@@ -13,6 +13,7 @@ import {
 	MediaReplaceFlow,
 	MediaUpload,
 	MediaUploadCheck,
+	__experimentalUseColors,
 } from '@wordpress/block-editor';
 
 import {
@@ -36,35 +37,13 @@ import {
 	VIDEO_BACKGROUND_TYPE,
 } from './shared';
 
+import BlockColorsStyleSelector from './block-colors-selector';
+
 const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
-
-const { getComputedStyle } = window;
-
-const applyFallbackStyles = withFallbackStyles( ( node, ownProps ) => {
-	const { textColor, backgroundColor } = ownProps.attributes;
-	const editableNode = node.querySelector( '[contenteditable="true"]' );
-	const computedStyles = editableNode
-		? getComputedStyle( editableNode )
-		: null;
-	return {
-		fallbackBackgroundColor:
-			backgroundColor || ! computedStyles
-				? undefined
-				: computedStyles.backgroundColor,
-		fallbackTextColor:
-			textColor || ! computedStyles ? undefined : computedStyles.color,
-	};
-} );
 
 class Inspector extends Component {
 	render() {
 		const {
-			backgroundColor,
-			setBackgroundColor,
-			setTextColor,
-			textColor,
-			fallbackTextColor,
-			fallbackBackgroundColor,
 			attributes,
 			setAttributes,
 		} = this.props;
@@ -84,6 +63,25 @@ class Inspector extends Component {
 			hasParallax,
 			bgOpacity,
 		} = attributes;
+
+		const {
+			TextColor,
+			BackgroundColor,
+			InspectorControlsColorPanel,
+		} = __experimentalUseColors(
+			[
+				{ name: 'textColor', property: 'color' },
+				{ name: 'backgroundColor', className: 'has-background' },
+			],
+			{
+				contrastCheckers: [
+					{
+						backgroundColor: true,
+						textColor: true,
+					},
+				],
+			},
+		);
 
 		const onSelectMedia = attributesFromMedia( setAttributes );
 
@@ -128,6 +126,12 @@ class Inspector extends Component {
 							</MediaUploadCheck>
 						</Toolbar>
 					) }
+					<BlockColorsStyleSelector
+						TextColor={ TextColor }
+						BackgroundColor={ BackgroundColor }
+					>
+						{ ColorPanel }
+					</BlockColorsStyleSelector>
 				</BlockControls>
 				<InspectorControls>
 					{ ! url && (
@@ -197,47 +201,6 @@ class Inspector extends Component {
 							</PanelRow>
 						</PanelBody>
 					) }
-					<PanelColorSettings
-						title={ __( 'Color Settings', 'oleti' ) }
-						colorSettings={ [
-							{
-								value: backgroundColor.color,
-								onChange: setBackgroundColor,
-								label: __( 'Background Color', 'oleti' ),
-							},
-							{
-								value: textColor.color,
-								onChange: setTextColor,
-								label: __( 'Text Color', 'oleti' ),
-							},
-						] }
-					>
-						{ !! url && (
-							<RangeControl
-								label={ __(
-									'Background Color opacity',
-									'oleti'
-								) }
-								value={ bgOpacity }
-								onChange={ ( newBgOpacity ) =>
-									setAttributes( {
-										bgOpacity: newBgOpacity,
-									} )
-								}
-								min={ 0 }
-								max={ 100 }
-								step={ 10 }
-							/>
-						) }
-						<ContrastChecker
-							{ ...{
-								textColor: textColor.color,
-								backgroundColor: backgroundColor.color,
-								fallbackTextColor,
-								fallbackBackgroundColor,
-							} }
-						/>
-					</PanelColorSettings>
 					<PanelBody
 						title={ __( 'Spacing', 'oleti' ) }
 						initialOpen={ false }
@@ -508,12 +471,11 @@ class Inspector extends Component {
 						/>
 					</PanelBody>
 				</InspectorControls>
+    { InspectorControlsColorPanel }
+
 			</Fragment>
 		);
 	}
 }
 
-export default compose( [
-	withColors( 'backgroundColor', { textColor: 'color' } ),
-	applyFallbackStyles,
-] )( Inspector );
+export default Inspector;
