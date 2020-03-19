@@ -1,5 +1,7 @@
 # Section - A Gutenberg block that allows you to add other blocks inside.
 
+> **This block is a work in progress.** I don't recommend using it in production environments unless you're sure you know what you're doing.
+
 ## Features
 
 - Background Image
