@@ -2,7 +2,7 @@
 	"name": "section",
 	"version": "0.1.0",
 	"description": "Section Block for Gutenberg",
-	"author": "The WordPress Contributors",
+	"author": "Bharath",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

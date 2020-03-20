@@ -7,8 +7,8 @@
  * License:         GPL-2.0-or-later
  * Text Domain:     oleti
  *
- * Plugin URI: https://github.com/bharath/section
- * Author URI: https://bharath.dev
+ * Plugin URI:      https://github.com/bharath/section
+ * Author URI:      https://bharath.dev
  *
  * @package         oleti
  */
