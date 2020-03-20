@@ -837,6 +837,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
     bgOpacity: {
       type: 'number',
       default: 50
+    },
+    paddingUnit: {
+      type: 'string',
+      default: 'px'
+    },
+    marginUnit: {
+      type: 'string',
+      default: 'px'
     }
   },
   example: {
@@ -1357,6 +1365,22 @@ var Inspector = /*#__PURE__*/function (_Component) {
           value: 'section',
           label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('section', 'oleti')
         }]
+      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(BaseControl, {
+        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Minimum height in pixels'),
+        id: inputId
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["__experimentalUnitControl"], {
+        id: inputId,
+        min: min,
+        onBlur: handleOnBlur,
+        onChange: handleOnChange,
+        onUnitChange: onUnitChange,
+        step: "1",
+        style: {
+          maxWidth: 80
+        },
+        unit: unit,
+        units: _shared__WEBPACK_IMPORTED_MODULE_12__["CSS_UNITS"],
+        value: inputValue
       }))));
     }
   }]);
@@ -1456,7 +1480,7 @@ function save(_ref) {
 /*!***********************!*\
   !*** ./src/shared.js ***!
   \***********************/
-/*! exports provided: IMAGE_BACKGROUND_TYPE, VIDEO_BACKGROUND_TYPE, backgroundImageStyles, attributesFromMedia */
+/*! exports provided: IMAGE_BACKGROUND_TYPE, VIDEO_BACKGROUND_TYPE, backgroundImageStyles, CSS_UNITS, attributesFromMedia */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1464,6 +1488,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IMAGE_BACKGROUND_TYPE", function() { return IMAGE_BACKGROUND_TYPE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VIDEO_BACKGROUND_TYPE", function() { return VIDEO_BACKGROUND_TYPE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backgroundImageStyles", function() { return backgroundImageStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CSS_UNITS", function() { return CSS_UNITS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "attributesFromMedia", function() { return attributesFromMedia; });
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
@@ -1480,6 +1505,31 @@ function backgroundImageStyles(url) {
     backgroundImage: "url(".concat(url, ")")
   } : {};
 }
+var CSS_UNITS = [{
+  value: 'px',
+  label: 'px',
+  default: 20
+}, {
+  value: '%',
+  label: '%',
+  default: 5
+}, {
+  value: 'em',
+  label: 'em',
+  default: 1
+}, {
+  value: 'rem',
+  label: 'rem',
+  default: 1
+}, {
+  value: 'vw',
+  label: 'vw',
+  default: 1
+}, {
+  value: 'vh',
+  label: 'vh',
+  default: 1
+}];
 function attributesFromMedia(setAttributes) {
   return function (media) {
     if (!media || !media.url) {

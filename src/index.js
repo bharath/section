@@ -144,6 +144,14 @@ registerBlockType( 'oleti/section', {
 			type: 'number',
 			default: 50,
 		},
+		paddingUnit: {
+			type: 'string',
+			default: 'px',
+		},
+		marginUnit: {
+			type: 'string',
+			default: 'px',
+		},
 	},
 
 	example: {

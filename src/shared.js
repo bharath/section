@@ -4,6 +4,15 @@ export function backgroundImageStyles( url ) {
 	return url ? { backgroundImage: `url(${ url })` } : {};
 }
 
+export const CSS_UNITS = [
+	{ value: 'px', label: 'px', default: 20 },
+	{ value: '%', label: '%', default: 5 },
+	{ value: 'em', label: 'em', default: 1 },
+	{ value: 'rem', label: 'rem', default: 1 },
+	{ value: 'vw', label: 'vw', default: 1 },
+	{ value: 'vh', label: 'vh', default: 1 },
+];
+
 export function attributesFromMedia( setAttributes ) {
 	return ( media ) => {
 		if ( ! media || ! media.url ) {

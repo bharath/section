@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Component, Fragment } from '@wordpress/element';
-import { compose } from '@wordpress/compose';
+import { compose, useInstanceId } from '@wordpress/compose';
 import {
 	InspectorControls,
 	ContrastChecker,
@@ -26,11 +26,13 @@ import {
 	IconButton,
 	Toolbar,
 	RangeControl,
+	__experimentalUnitControl as UnitControl,
 } from '@wordpress/components';
 
 import icons from './icons';
 
 import {
+	CSS_UNITS,
 	attributesFromMedia,
 	IMAGE_BACKGROUND_TYPE,
 	VIDEO_BACKGROUND_TYPE,
@@ -507,6 +509,20 @@ class Inspector extends Component {
 							] }
 						/>
 					</PanelBody>
+					<BaseControl label={ __( 'Minimum height in pixels' ) } id={ inputId }>
+						<UnitControl
+							id={ inputId }
+							min={ min }
+							onBlur={ handleOnBlur }
+							onChange={ handleOnChange }
+							onUnitChange={ onUnitChange }
+							step="1"
+							style={ { maxWidth: 80 } }
+							unit={ unit }
+							units={ CSS_UNITS }
+							value={ inputValue }
+						/>
+					</BaseControl>
 				</InspectorControls>
 			</Fragment>
 		);
