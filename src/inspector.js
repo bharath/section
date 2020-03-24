@@ -13,7 +13,6 @@ import {
 	MediaReplaceFlow,
 	MediaUpload,
 	MediaUploadCheck,
-	__experimentalUseColors,
 } from '@wordpress/block-editor';
 
 import {
@@ -27,6 +26,7 @@ import {
 	IconButton,
 	Toolbar,
 	RangeControl,
+	__experimentalUseColors,
 } from '@wordpress/components';
 
 import icons from './icons';

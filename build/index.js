@@ -860,20 +860,14 @@ icons.sectionMedia = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["cre
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _deprecated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./deprecated */ "./src/deprecated.js");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./save */ "./src/save.js");
-/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./icons */ "./src/icons.js");
-
-
-var _attributes;
-
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _deprecated__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deprecated */ "./src/deprecated.js");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/save.js");
+/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./icons */ "./src/icons.js");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -901,18 +895,18 @@ var _attributes;
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('oleti/section', {
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('oleti/section', {
   /**
    * This is the display title for your block, which can be translated with `i18n` functions.
    * The block inserter will show this name.
    */
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Section', 'oleti'),
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Section', 'oleti'),
 
   /**
    * This is a short description for your block, can be translated with `i18n` functions.
    * It will be shown in the Block Tab in the Settings Sidebar.
    */
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('A Gutenberg block that allows you to add other blocks inside.', 'oleti'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('A Gutenberg block that allows you to add other blocks inside.', 'oleti'),
 
   /**
    * Blocks are grouped into categories to help users browse and discover them.
@@ -925,7 +919,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
    * These can be any of WordPress’ Dashicons, or a custom svg element.
    */
   icon: {
-    src: _icons__WEBPACK_IMPORTED_MODULE_6__["default"].section
+    src: _icons__WEBPACK_IMPORTED_MODULE_5__["default"].section
   },
 
   /**
@@ -941,9 +935,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
   },
   // Make it easier to discover a block with keyword aliases.
   // These can be localised so your keywords work across locales.
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('section', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('group', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('container', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('row', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('wrapper', 'oleti')],
+  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('section', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('group', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('container', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('row', 'oleti'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('wrapper', 'oleti')],
   // Specifying block attributes
-  attributes: (_attributes = {
+  attributes: {
     align: {
       type: 'string' //default: 'wide',
 
@@ -1008,16 +1002,14 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
     bgOpacity: {
       type: 'number',
       default: 50
+    },
+    rgbTextColor: {
+      type: 'string'
+    },
+    rgbBackgroundColor: {
+      type: 'string'
     }
-  }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_attributes, "textColor", {
-    type: 'string'
-  }), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_attributes, "rgbTextColor", {
-    type: 'string'
-  }), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_attributes, "backgroundColor", {
-    type: 'string'
-  }), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_attributes, "rgbBackgroundColor", {
-    type: 'string'
-  }), _attributes),
+  },
   example: {
     attributes: {
       customBackgroundColor: '#ffffff',
@@ -1028,21 +1020,21 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
       attributes: {
         customTextColor: '#cf2e2e',
         fontSize: 'large',
-        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('One.', 'oleti')
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('One.', 'oleti')
       }
     }, {
       name: 'core/paragraph',
       attributes: {
         customTextColor: '#ff6900',
         fontSize: 'large',
-        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Two.', 'oleti')
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Two.', 'oleti')
       }
     }, {
       name: 'core/paragraph',
       attributes: {
         customTextColor: '#fcb900',
         fontSize: 'large',
-        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Three.', 'oleti')
+        content: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Three.', 'oleti')
       }
     }]
   },
@@ -1076,9 +1068,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
         // new group block.
 
         var groupInnerBlocks = blocks.map(function (block) {
-          return Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["createBlock"])(block.name, block.attributes, block.innerBlocks);
+          return Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["createBlock"])(block.name, block.attributes, block.innerBlocks);
         });
-        return Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["createBlock"])('oleti/section', {
+        return Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["createBlock"])('oleti/section', {
           align: widestAlignment
         }, groupInnerBlocks);
       }
@@ -1095,7 +1087,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
    *
    * @return {WPElement} Element to render.
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_4__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
 
   /**
    * The save function defines the way in which the different attributes should be combined
@@ -1105,8 +1097,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('ole
    *
    * @return {WPElement} Element to render.
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_5__["default"],
-  deprecated: _deprecated__WEBPACK_IMPORTED_MODULE_3__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
+  deprecated: _deprecated__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 
 /***/ }),
@@ -1199,7 +1191,7 @@ var Inspector = /*#__PURE__*/function (_Component) {
           hasParallax = attributes.hasParallax,
           bgOpacity = attributes.bgOpacity;
 
-      var _experimentalUseColo = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["__experimentalUseColors"])([{
+      var _experimentalUseColo = Object(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["__experimentalUseColors"])([{
         name: 'textColor',
         property: 'color'
       }, {
