@@ -68,9 +68,25 @@ function oleti_section_block_init() {
 add_action( 'init', 'oleti_section_block_init' );
 
 register_pattern(
-    'oleti/section',
-    array(
-        'title'   => __( 'Three buttons' ),
-        'content' => "<!-- wp:buttons {\"align\":\"center\"} -->\n<div class=\"wp-block-buttons aligncenter\"><!-- wp:button {\"backgroundColor\":\"very-dark-gray\",\"borderRadius\":0} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background has-very-dark-gray-background-color no-border-radius\">Button One</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"textColor\":\"very-dark-gray\",\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-text-color has-very-dark-gray-color no-border-radius\">Button Two</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->",
-    )
+    'oleti/section-background-color',
+    [
+        'title'   => __( 'Section with Background Color' ),
+        'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"accent\",\"textColor\":\"background\"} -->
+\n<section class=\"wp-block-oleti-section alignfull has-accent-background-color has-background-color has-text-color has-background padding-top-extra-small padding-right-none padding-bottom-extra-small padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+\n<!-- /wp:paragraph --></div></section>
+\n<!-- /wp:oleti/section -->",
+	]
+);
+
+register_pattern(
+    'oleti/section-background-image',
+    [
+        'title'   => __( 'Section with Background Image' ),
+        'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"primary\",\"paddingTop\":\"normal\",\"paddingBottom\":\"normal\",\"url\":\"https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg\",\"id\":46} -->
+\n<section class=\"wp-block-oleti-section alignfull has-primary-background-color has-background padding-top-normal padding-right-none padding-bottom-normal padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\" style=\"background-image:url(https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg)\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+\n<!-- /wp:paragraph --></div></section>
+\n<!-- /wp:oleti/section -->",
+	]
 );
