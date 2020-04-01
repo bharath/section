@@ -67,26 +67,37 @@ function oleti_section_block_init() {
 }
 add_action( 'init', 'oleti_section_block_init' );
 
-register_pattern(
-    'oleti/section-background-color',
-    [
-        'title'   => __( 'Section with Background Color' ),
-        'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"accent\",\"textColor\":\"background\"} -->
-\n<section class=\"wp-block-oleti-section alignfull has-accent-background-color has-background-color has-text-color has-background padding-top-extra-small padding-right-none padding-bottom-extra-small padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-\n<!-- /wp:paragraph --></div></section>
-\n<!-- /wp:oleti/section -->",
-	]
-);
+/**
+ * Register Custom Block Styles
+ */
+function oleti_section_block_register_block_patterns() {
+    if ( function_exists( 'register_pattern' ) ) {
+        /**
+         * Register block patterns
+         */
+        register_pattern(
+			'oleti/section-background-color',
+			[
+				'title'   => __( 'Section with Background Color', 'oleti' ),
+				'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"accent\",\"textColor\":\"background\"} -->
+		\n<section class=\"wp-block-oleti-section alignfull has-accent-background-color has-background-color has-text-color has-background padding-top-extra-small padding-right-none padding-bottom-extra-small padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		\n<!-- /wp:paragraph --></div></section>
+		\n<!-- /wp:oleti/section -->",
+			]
+		);
 
-register_pattern(
-    'oleti/section-background-image',
-    [
-        'title'   => __( 'Section with Background Image' ),
-        'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"primary\",\"paddingTop\":\"normal\",\"paddingBottom\":\"normal\",\"url\":\"https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg\",\"id\":46} -->
-\n<section class=\"wp-block-oleti-section alignfull has-primary-background-color has-background padding-top-normal padding-right-none padding-bottom-normal padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\" style=\"background-image:url(https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg)\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-\n<!-- /wp:paragraph --></div></section>
-\n<!-- /wp:oleti/section -->",
-	]
-);
+		register_pattern(
+			'oleti/section-background-image',
+			[
+				'title'   => __( 'Section with Background Image', 'oleti' ),
+				'content' => "<!-- wp:oleti/section {\"align\":\"full\",\"backgroundColor\":\"primary\",\"paddingTop\":\"normal\",\"paddingBottom\":\"normal\",\"url\":\"https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg\",\"id\":46} -->
+		\n<section class=\"wp-block-oleti-section alignfull has-primary-background-color has-background padding-top-normal padding-right-none padding-bottom-normal padding-left-none margin-top-none margin-bottom-none has-background-overlay-50 has-background-overlay\" style=\"background-image:url(https://jsfwpblock.test/wp-content/uploads/2020/02/f5346433-b15c-33cf-86db-93811aba4fc3.jpg)\"><div class=\"wp-block-oleti-section__inner-container\">\n<!-- wp:paragraph -->
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		\n<!-- /wp:paragraph --></div></section>
+		\n<!-- /wp:oleti/section -->",
+			]
+		);
+    }
+}
+add_action( 'init', 'oleti_section_block_register_block_patterns' );
