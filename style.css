@@ -277,7 +277,7 @@
 }
 
 .wp-block-oleti-section .wp-block-oleti-section__inner-container {
-	width: calc(100% - 70px);
+	width: calc(100% - 0px);
 	position: relative;
 	margin: 0 auto;
 	z-index: 1;
