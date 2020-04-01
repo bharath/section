@@ -13,6 +13,8 @@ import {
 	MediaReplaceFlow,
 	MediaUpload,
 	MediaUploadCheck,
+	__experimentalUseGradient,
+	__experimentalPanelColorGradientSettings as PanelColorGradientSettings,
 } from '@wordpress/block-editor';
 
 import {
@@ -41,18 +43,23 @@ const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
 const { getComputedStyle } = window;
 
 const applyFallbackStyles = withFallbackStyles( ( node, ownProps ) => {
-	const { textColor, backgroundColor } = ownProps.attributes;
-	const editableNode = node.querySelector( '[contenteditable="true"]' );
-	const computedStyles = editableNode
-		? getComputedStyle( editableNode )
-		: null;
+	const { textColor, backgroundColor } = ownProps;
+	const backgroundColorValue = backgroundColor && backgroundColor.color;
+	const textColorValue = textColor && textColor.color;
+	//avoid the use of querySelector if textColor color is known and verify if node is available.
+	const textNode =
+		! textColorValue && node
+			? node.querySelector( '[contenteditable="true"]' )
+			: null;
 	return {
 		fallbackBackgroundColor:
-			backgroundColor || ! computedStyles
+			backgroundColorValue || ! node
 				? undefined
-				: computedStyles.backgroundColor,
+				: getComputedStyle( node ).backgroundColor,
 		fallbackTextColor:
-			textColor || ! computedStyles ? undefined : computedStyles.color,
+			textColorValue || ! textNode
+				? undefined
+				: getComputedStyle( textNode ).color,
 	};
 } );
 
@@ -67,6 +74,7 @@ class Inspector extends Component {
 			fallbackBackgroundColor,
 			attributes,
 			setAttributes,
+
 		} = this.props;
 
 		const {
@@ -84,6 +92,12 @@ class Inspector extends Component {
 			hasParallax,
 			bgOpacity,
 		} = attributes;
+
+		const {
+			gradientClass,
+			gradientValue,
+			setGradient,
+		} = gradients();
 
 		const onSelectMedia = attributesFromMedia( setAttributes );
 
@@ -197,6 +211,35 @@ class Inspector extends Component {
 							</PanelRow>
 						</PanelBody>
 					) }
+					<PanelColorGradientSettings
+						title={ __( 'Background & Text Color' ) }
+						settings={ [
+							{
+								colorValue: textColor.color,
+								onColorChange: setTextColor,
+								label: __( 'Text color' ),
+							},
+							{
+								colorValue: backgroundColor.color,
+								onColorChange: setBackgroundColor,
+								gradientValue,
+								onGradientChange: setGradient,
+								label: __( 'Background' ),
+							},
+						] }
+					>
+						<ContrastChecker
+							{ ...{
+								// Text is considered large if font size is greater or equal to 18pt or 24px,
+								// currently that's not the case for button.
+								isLargeText: false,
+								textColor: textColor.color,
+								backgroundColor: backgroundColor.color,
+								fallbackBackgroundColor,
+								fallbackTextColor,
+							} }
+						/>
+					</PanelColorGradientSettings>
 					<PanelColorSettings
 						title={ __( 'Color Settings', 'oleti' ) }
 						colorSettings={ [

@@ -837,6 +837,12 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
     bgOpacity: {
       type: 'number',
       default: 50
+    },
+    gradient: {
+      type: 'string'
+    },
+    customGradient: {
+      type: 'string'
     }
   },
   example: {
@@ -991,14 +997,15 @@ var ALLOWED_MEDIA_TYPES = ['image', 'video'];
 var _window = window,
     getComputedStyle = _window.getComputedStyle;
 var applyFallbackStyles = Object(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["withFallbackStyles"])(function (node, ownProps) {
-  var _ownProps$attributes = ownProps.attributes,
-      textColor = _ownProps$attributes.textColor,
-      backgroundColor = _ownProps$attributes.backgroundColor;
-  var editableNode = node.querySelector('[contenteditable="true"]');
-  var computedStyles = editableNode ? getComputedStyle(editableNode) : null;
+  var textColor = ownProps.textColor,
+      backgroundColor = ownProps.backgroundColor;
+  var backgroundColorValue = backgroundColor && backgroundColor.color;
+  var textColorValue = textColor && textColor.color; //avoid the use of querySelector if textColor color is known and verify if node is available.
+
+  var textNode = !textColorValue && node ? node.querySelector('[contenteditable="true"]') : null;
   return {
-    fallbackBackgroundColor: backgroundColor || !computedStyles ? undefined : computedStyles.backgroundColor,
-    fallbackTextColor: textColor || !computedStyles ? undefined : computedStyles.color
+    fallbackBackgroundColor: backgroundColorValue || !node ? undefined : getComputedStyle(node).backgroundColor,
+    fallbackTextColor: textColorValue || !textNode ? undefined : getComputedStyle(textNode).color
   };
 });
 
@@ -1036,6 +1043,12 @@ var Inspector = /*#__PURE__*/function (_Component) {
           focalPoint = attributes.focalPoint,
           hasParallax = attributes.hasParallax,
           bgOpacity = attributes.bgOpacity;
+
+      var _gradients = gradients(),
+          gradientClass = _gradients.gradientClass,
+          gradientValue = _gradients.gradientValue,
+          setGradient = _gradients.setGradient;
+
       var onSelectMedia = Object(_shared__WEBPACK_IMPORTED_MODULE_12__["attributesFromMedia"])(setAttributes);
 
       var toggleParallax = function toggleParallax() {
@@ -1111,7 +1124,28 @@ var Inspector = /*#__PURE__*/function (_Component) {
             hasParallax: undefined
           });
         }
-      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Clear Media', 'oleti')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["PanelColorSettings"], {
+      }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Clear Media', 'oleti')))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["__experimentalPanelColorGradientSettings"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Background & Text Color'),
+        settings: [{
+          colorValue: textColor.color,
+          onColorChange: setTextColor,
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Text color')
+        }, {
+          colorValue: backgroundColor.color,
+          onColorChange: setBackgroundColor,
+          gradientValue: gradientValue,
+          onGradientChange: setGradient,
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Background')
+        }]
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["ContrastChecker"], {
+        // Text is considered large if font size is greater or equal to 18pt or 24px,
+        // currently that's not the case for button.
+        isLargeText: false,
+        textColor: textColor.color,
+        backgroundColor: backgroundColor.color,
+        fallbackBackgroundColor: fallbackBackgroundColor,
+        fallbackTextColor: fallbackTextColor
+      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["PanelColorSettings"], {
         title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Color Settings', 'oleti'),
         colorSettings: [{
           value: backgroundColor.color,

@@ -144,6 +144,12 @@ registerBlockType( 'oleti/section', {
 			type: 'number',
 			default: 50,
 		},
+		gradient: {
+			type: 'string',
+		},
+		customGradient: {
+			type: 'string',
+		},
 	},
 
 	example: {
