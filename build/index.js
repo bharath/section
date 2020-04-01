@@ -1044,10 +1044,9 @@ var Inspector = /*#__PURE__*/function (_Component) {
           hasParallax = attributes.hasParallax,
           bgOpacity = attributes.bgOpacity;
 
-      var _gradients = gradients(),
-          gradientClass = _gradients.gradientClass,
-          gradientValue = _gradients.gradientValue,
-          setGradient = _gradients.setGradient;
+      var _useGradient = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["__experimentalUseGradient"])(),
+          gradientValue = _useGradient.gradientValue,
+          setGradient = _useGradient.setGradient;
 
       var onSelectMedia = Object(_shared__WEBPACK_IMPORTED_MODULE_12__["attributesFromMedia"])(setAttributes);
 
@@ -1078,7 +1077,28 @@ var Inspector = /*#__PURE__*/function (_Component) {
             onClick: open
           });
         }
-      })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["InspectorControls"], null, !url && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["PanelBody"], {
+      })))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["InspectorControls"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["__experimentalPanelColorGradientSettings"], {
+        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Button Background & Text Color', 'jetpack'),
+        settings: [{
+          colorValue: textColor.color,
+          onColorChange: setTextColor,
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Text Color', 'jetpack')
+        }, {
+          colorValue: backgroundColor.color,
+          onColorChange: setBackgroundColor,
+          gradientValue: gradientValue,
+          onGradientChange: setGradient,
+          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Background', 'jetpack')
+        }]
+      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["ContrastChecker"], {
+        // Text is considered large if font size is greater or equal to 18pt or 24px,
+        // currently that's not the case for button.
+        isLargeText: false,
+        textColor: textColor.color,
+        backgroundColor: backgroundColor.color,
+        fallbackBackgroundColor: fallbackBackgroundColor,
+        fallbackTextColor: fallbackTextColor
+      })), !url && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["PanelBody"], {
         title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Media', 'oleti')
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["MediaUploadCheck"], null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_9__["MediaUpload"], {
         onSelect: onSelectMedia,

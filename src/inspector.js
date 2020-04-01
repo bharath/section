@@ -13,7 +13,7 @@ import {
 	MediaReplaceFlow,
 	MediaUpload,
 	MediaUploadCheck,
-	__experimentalUseGradient,
+	__experimentalUseGradient as useGradient,
 	__experimentalPanelColorGradientSettings as PanelColorGradientSettings,
 } from '@wordpress/block-editor';
 
@@ -48,18 +48,12 @@ const applyFallbackStyles = withFallbackStyles( ( node, ownProps ) => {
 	const textColorValue = textColor && textColor.color;
 	//avoid the use of querySelector if textColor color is known and verify if node is available.
 	const textNode =
-		! textColorValue && node
-			? node.querySelector( '[contenteditable="true"]' )
-			: null;
+		! textColorValue && node ? node.querySelector( '[contenteditable="true"]' ) : null;
 	return {
 		fallbackBackgroundColor:
-			backgroundColorValue || ! node
-				? undefined
-				: getComputedStyle( node ).backgroundColor,
+			backgroundColorValue || ! node ? undefined : getComputedStyle( node ).backgroundColor,
 		fallbackTextColor:
-			textColorValue || ! textNode
-				? undefined
-				: getComputedStyle( textNode ).color,
+			textColorValue || ! textNode ? undefined : getComputedStyle( textNode ).color,
 	};
 } );
 
@@ -74,7 +68,6 @@ class Inspector extends Component {
 			fallbackBackgroundColor,
 			attributes,
 			setAttributes,
-
 		} = this.props;
 
 		const {
@@ -93,11 +86,7 @@ class Inspector extends Component {
 			bgOpacity,
 		} = attributes;
 
-		const {
-			gradientClass,
-			gradientValue,
-			setGradient,
-		} = gradients();
+		const { gradientValue, setGradient } = useGradient();
 
 		const onSelectMedia = attributesFromMedia( setAttributes );
 
@@ -144,6 +133,36 @@ class Inspector extends Component {
 					) }
 				</BlockControls>
 				<InspectorControls>
+						<PanelColorGradientSettings
+							title={ __( 'Button Background & Text Color', 'jetpack' ) }
+							settings={ [
+								{
+									colorValue: textColor.color,
+									onColorChange: setTextColor,
+									label: __( 'Text Color', 'jetpack' ),
+								},
+								{
+									colorValue: backgroundColor.color,
+									onColorChange: setBackgroundColor,
+									gradientValue,
+									onGradientChange: setGradient,
+									label: __( 'Background', 'jetpack' ),
+								},
+							] }
+						>
+							<ContrastChecker
+								{ ...{
+									// Text is considered large if font size is greater or equal to 18pt or 24px,
+									// currently that's not the case for button.
+									isLargeText: false,
+									textColor: textColor.color,
+									backgroundColor: backgroundColor.color,
+									fallbackBackgroundColor,
+									fallbackTextColor,
+								} }
+							/>
+						</PanelColorGradientSettings>
+
 					{ ! url && (
 						<PanelBody title={ __( 'Media', 'oleti' ) }>
 							<MediaUploadCheck>
