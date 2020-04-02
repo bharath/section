@@ -18,7 +18,7 @@
 		"i18n-mo": "for file in `find . -name \"*.po\"` ; do msgfmt -o ${file/.po/.mo} $file ; done"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^7.1.2",
+		"@wordpress/scripts": "^7.2.0",
 		"classnames": "^2.2.6"
 	}
 }
