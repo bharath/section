@@ -40,3 +40,173 @@
 .block-editor-block-list__layout .block-editor-block-list__block.has-child-selected > .block-editor-block-list__block-edit > [data-block] > div > .wp-block-oleti-section__inner-container > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-editor-block-list__block:not(.is-selected) > .block-editor-block-list__block-edit::before {
 	border: 1px dashed rgba(123, 134, 162, 0.3);
 }
+
+
+/**
+* The following styles get applied both on the front of your site
+* and in the editor.
+*
+* Replace them with your own styles or remove the file completely.
+*/
+
+/* -- Extra Small Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-extra-small {
+	padding-top: 15px;
+}
+
+.wp-block-oleti-section.padding-right-extra-small {
+	padding-right: 15px;
+}
+
+.wp-block-oleti-section.padding-bottom-extra-small {
+	padding-bottom: 15px;
+}
+
+.wp-block-oleti-section.padding-left-extra-small {
+	padding-left: 15px;
+}
+
+.wp-block-oleti-section.margin-top-extra-small {
+	margin-top: 15px;
+}
+
+.wp-block-oleti-section.margin-bottom-extra-small {
+	margin-bottom: 15px;
+}
+
+/* -- Small Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-small {
+	padding-top: 30px;
+}
+
+.wp-block-oleti-section.padding-right-small {
+	padding-right: 30px;
+}
+
+.wp-block-oleti-section.padding-bottom-small {
+	padding-bottom: 30px;
+}
+
+.wp-block-oleti-section.padding-left-small {
+	padding-left: 30px;
+}
+
+.wp-block-oleti-section.margin-top-small {
+	margin-top: 30px;
+}
+
+.wp-block-oleti-section.margin-bottom-small {
+	margin-bottom: 30px;
+}
+
+/* -- Normal Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-normal {
+	padding-top: 45px;
+}
+
+.wp-block-oleti-section.padding-right-normal {
+	padding-right: 45px;
+}
+
+.wp-block-oleti-section.padding-bottom-normal {
+	padding-bottom: 45px;
+}
+
+.wp-block-oleti-section.padding-left-normal {
+	padding-left: 45px;
+}
+
+.wp-block-oleti-section.margin-top-normal {
+	margin-top: 45px;
+}
+
+.wp-block-oleti-section.margin-bottom-normal {
+	margin-bottom: 45px;
+}
+
+/* -- Medium Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-medium {
+	padding-top: 60px;
+}
+
+.wp-block-oleti-section.padding-right-medium {
+	padding-right: 60px;
+}
+
+.wp-block-oleti-section.padding-bottom-medium {
+	padding-bottom: 60px;
+}
+
+.wp-block-oleti-section.padding-left-medium {
+	padding-left: 60px;
+}
+
+.wp-block-oleti-section.margin-top-medium {
+	margin-top: 60px;
+}
+
+.wp-block-oleti-section.margin-bottom-medium {
+	margin-bottom: 60px;
+}
+
+/* -- Large Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-large {
+	padding-top: 75px;
+}
+
+.wp-block-oleti-section.padding-right-large {
+	padding-right: 75px;
+}
+
+.wp-block-oleti-section.padding-bottom-large {
+	padding-bottom: 75px;
+}
+
+.wp-block-oleti-section.padding-left-large {
+	padding-left: 75px;
+}
+
+.wp-block-oleti-section.margin-top-large {
+	margin-top: 75px;
+}
+
+.wp-block-oleti-section.margin-bottom-large {
+	margin-bottom: 75px;
+}
+
+/* -- Extra Large Spacing
+--------------------------------------------- */
+
+.wp-block-oleti-section.padding-top-extra-large {
+	padding-top: 100px;
+}
+
+.wp-block-oleti-section.padding-right-extra-large {
+	padding-right: 100px;
+}
+
+.wp-block-oleti-section.padding-bottom-extra-large {
+	padding-bottom: 100px;
+}
+
+.wp-block-oleti-section.padding-left-extra-large {
+	padding-left: 100px;
+}
+
+.wp-block-oleti-section.margin-top-extra-large {
+	margin-top: 100px;
+}
+
+.wp-block-oleti-section.margin-bottom-extra-large {
+	margin-bottom: 100px;
+}

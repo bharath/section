@@ -65,6 +65,8 @@ registerBlockType( 'oleti/section', {
 		anchor: true,
 		// Removes support for an HTML mode.
 		html: false,
+		//lightBlockWrapper: true,
+		__experimentalColor: { gradients: true },
 	},
 
 	// Make it easier to discover a block with keyword aliases.
@@ -101,11 +103,11 @@ registerBlockType( 'oleti/section', {
 		},
 		paddingTop: {
 			type: 'string',
-			default: 'extra-small',
+			default: 'none',
 		},
 		paddingBottom: {
 			type: 'string',
-			default: 'extra-small',
+			default: 'none',
 		},
 		paddingLeft: {
 			type: 'string',

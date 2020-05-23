@@ -67,15 +67,31 @@ function oleti_section_block_init() {
 }
 add_action( 'init', 'oleti_section_block_init' );
 
+
+
+
 /**
  * Register Custom Block Styles
  */
 function oleti_section_block_register_block_patterns() {
-    if ( function_exists( 'register_pattern' ) ) {
-        /**
-         * Register block patterns
-         */
-        register_pattern(
+
+	if ( function_exists( 'register_block_pattern_category' ) ) {
+
+		register_block_pattern_category(
+			'Section',
+			[
+				'label' => __( 'Section', 'oleti' )
+			]
+		);
+
+	}
+
+	if ( function_exists( 'register_pattern' ) ) {
+
+		/**
+		* Register block patterns
+		*/
+		register_pattern(
 			'oleti/section-background-color',
 			[
 				'title'   => __( 'Section with Background Color', 'oleti' ),
@@ -98,6 +114,8 @@ function oleti_section_block_register_block_patterns() {
 		\n<!-- /wp:oleti/section -->",
 			]
 		);
-    }
+
+	}
+
 }
 add_action( 'init', 'oleti_section_block_register_block_patterns' );
