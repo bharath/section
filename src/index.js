@@ -66,7 +66,7 @@ registerBlockType( 'oleti/section', {
 		// Removes support for an HTML mode.
 		html: false,
 		//lightBlockWrapper: true,
-		__experimentalColor: { gradients: true },
+		//__experimentalColor: { gradients: true },
 	},
 
 	// Make it easier to discover a block with keyword aliases.
