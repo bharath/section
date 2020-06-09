@@ -119,6 +119,9 @@ registerBlockType( 'oleti/section', {
 			type: 'number',
 			default: 50,
 		},
+		contentPosition: {
+			type: 'string',
+		},
 	},
 
 	example: {

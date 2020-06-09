@@ -34,7 +34,6 @@ import {
 	attributesFromMedia,
 	IMAGE_BACKGROUND_TYPE,
 	VIDEO_BACKGROUND_TYPE,
-	isContentPositionCenter,
 } from './shared';
 
 const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
