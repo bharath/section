@@ -25,6 +25,8 @@ import {
 	IMAGE_BACKGROUND_TYPE,
 	VIDEO_BACKGROUND_TYPE,
 	backgroundImageStyles,
+	isContentPositionCenter,
+	getPositionClassName,
 } from './shared';
 
 class SectionEdit extends Component {
@@ -44,21 +46,29 @@ class SectionEdit extends Component {
 			focalPoint,
 			hasParallax,
 			style: styleAttribute,
+			contentPosition,
 		} = attributes;
 
 		const { __Visualizer: BoxControlVisualizer } = BoxControl;
 
 		const hasBgOpacity = !! attributes.bgOpacity;
 
-		const classes = classnames( className, {
-			'has-background': backgroundColor.color,
-			'has-text-color': textColor.color,
-			[ backgroundColor.class ]: backgroundColor.class,
-			[ textColor.class ]: textColor.class,
-			'has-parallax': hasParallax,
-			[ `has-background-overlay-${ attributes.bgOpacity }` ]: hasBgOpacity,
-			'has-background-overlay': hasBgOpacity,
-		} );
+		const classes = classnames(
+			className,
+			{
+				'has-background': backgroundColor.color,
+				'has-text-color': textColor.color,
+				[ backgroundColor.class ]: backgroundColor.class,
+				[ textColor.class ]: textColor.class,
+				'has-parallax': hasParallax,
+				[ `has-background-overlay-${ attributes.bgOpacity }` ]: hasBgOpacity,
+				'has-background-overlay': hasBgOpacity,
+				'has-custom-content-position': ! isContentPositionCenter(
+					contentPosition
+				),
+			},
+			getPositionClassName( contentPosition )
+		);
 
 		const style =
 			backgroundType === IMAGE_BACKGROUND_TYPE
