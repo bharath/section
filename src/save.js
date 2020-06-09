@@ -20,14 +20,11 @@ export default function save( { className, attributes } ) {
 		customBackgroundColor,
 		textColor,
 		customTextColor,
-		tagName,
 		url,
 		backgroundType,
 		focalPoint,
 		hasParallax,
 	} = attributes;
-
-	const CustomTag = `${ tagName }`;
 
 	const backgroundClass = getColorClassName(
 		'background-color',
@@ -56,7 +53,7 @@ export default function save( { className, attributes } ) {
 	}
 
 	return (
-		<CustomTag className={ classes } style={ style }>
+		<div className={classes} style={style}>
 			{ VIDEO_BACKGROUND_TYPE === backgroundType && url && (
 				<video
 					className="wp-block-oleti-section__video-background"
@@ -69,6 +66,6 @@ export default function save( { className, attributes } ) {
 			<div className="wp-block-oleti-section__inner-container">
 				<InnerBlocks.Content />
 			</div>
-		</CustomTag>
+		</div>
 	);
 }

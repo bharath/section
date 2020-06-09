@@ -18,7 +18,6 @@ import {
 import {
 	PanelBody,
 	withFallbackStyles,
-	SelectControl,
 	ToggleControl,
 	FocalPointPicker,
 	PanelRow,
@@ -70,9 +69,6 @@ class Inspector extends Component {
 		} = this.props;
 
 		const {
-			tagName,
-			marginTop,
-			marginBottom,
 			id,
 			url,
 			backgroundType,
@@ -234,54 +230,6 @@ class Inspector extends Component {
 							} }
 						/>
 					</PanelColorSettings>
-					<PanelBody
-						title={ __( 'Layout', 'oleti' ) }
-						initialOpen={ false }
-					>
-						<SelectControl
-							label={ __( 'HTML Tag', 'oleti' ) }
-							value={ tagName }
-							onChange={ ( value ) =>
-								setAttributes( {
-									tagName: value,
-								} )
-							}
-							options={ [
-								{
-									value: 'article',
-									label: __( 'article', 'oleti' ),
-								},
-								{
-									value: 'aside',
-									label: __( 'aside', 'oleti' ),
-								},
-								{
-									value: 'div',
-									label: __( 'div', 'oleti' ),
-								},
-								{
-									value: 'footer',
-									label: __( 'footer', 'oleti' ),
-								},
-								{
-									value: 'header',
-									label: __( 'header', 'oleti' ),
-								},
-								{
-									value: 'main',
-									label: __( 'main', 'oleti' ),
-								},
-								{
-									value: 'nav',
-									label: __( 'nav', 'oleti' ),
-								},
-								{
-									value: 'section',
-									label: __( 'section', 'oleti' ),
-								},
-							] }
-						/>
-					</PanelBody>
 				</InspectorControls>
 			</Fragment>
 		);

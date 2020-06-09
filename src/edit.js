@@ -9,7 +9,7 @@ import classnames from 'classnames';
 import { withSelect } from '@wordpress/data';
 import { compose } from '@wordpress/compose';
 import { Component, Fragment } from '@wordpress/element';
-import { withColors, InnerBlocks } from '@wordpress/block-editor';
+import { withColors, InnerBlocks, __experimentalBlock as Block } from '@wordpress/block-editor';
 import { __experimentalBoxControl as BoxControl } from '@wordpress/components';
 
 /**
@@ -35,7 +35,6 @@ class SectionEdit extends Component {
 		} = this.props;
 
 		const {
-			tagName,
 			url,
 			backgroundType,
 			focalPoint,
@@ -45,7 +44,6 @@ class SectionEdit extends Component {
 
 		const { __Visualizer: BoxControlVisualizer } = BoxControl;
 
-		const CustomTag = `${ tagName }`;
 		const hasBgOpacity = !! attributes.bgOpacity;
 
 		const classes = classnames( className, {
@@ -71,11 +69,7 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<CustomTag
-					data-url={ url }
-					className={ classes }
-					style={ style }
-				>
+				<Block.div className="is-placeholder">
 					<BoxControlVisualizer values={styleAttribute?.padding} />
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img
@@ -104,7 +98,7 @@ class SectionEdit extends Component {
 							}
 						/>
 					</div>
-				</CustomTag>
+				</Block.div>
 			</Fragment>
 		);
 	}

@@ -599,14 +599,12 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
           className = _this$props.className,
           hasInnerBlocks = _this$props.hasInnerBlocks,
           isSelected = _this$props.isSelected;
-      var tagName = attributes.tagName,
-          url = attributes.url,
+      var url = attributes.url,
           backgroundType = attributes.backgroundType,
           focalPoint = attributes.focalPoint,
           hasParallax = attributes.hasParallax,
           styleAttribute = attributes.style;
       var BoxControlVisualizer = _wordpress_components__WEBPACK_IMPORTED_MODULE_11__["__experimentalBoxControl"].__Visualizer;
-      var CustomTag = "".concat(tagName);
       var hasBgOpacity = !!attributes.bgOpacity;
       var classes = classnames__WEBPACK_IMPORTED_MODULE_7___default()(className, (_classnames = {
         'has-background': backgroundColor.color,
@@ -618,10 +616,8 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
         style.backgroundPosition = "".concat(Math.round(focalPoint.x * 100), "% ").concat(Math.round(focalPoint.y * 100), "%");
       }
 
-      return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, isSelected && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_inspector__WEBPACK_IMPORTED_MODULE_12__["default"], this.props), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(CustomTag, {
-        "data-url": url,
-        className: classes,
-        style: style
+      return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, isSelected && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_inspector__WEBPACK_IMPORTED_MODULE_12__["default"], this.props), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_10__["__experimentalBlock"].div, {
+        className: "is-placeholder"
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(BoxControlVisualizer, {
         values: styleAttribute === null || styleAttribute === void 0 ? void 0 : styleAttribute.padding
       }), _shared__WEBPACK_IMPORTED_MODULE_13__["IMAGE_BACKGROUND_TYPE"] === backgroundType && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("img", {
@@ -774,9 +770,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
     anchor: true,
     // Removes support for an HTML mode.
     html: false,
-    //lightBlockWrapper: true,
-    //__experimentalColor: { gradients: true },
-    "__experimentalPadding": true
+    lightBlockWrapper: true,
+    __experimentalPadding: true //__experimentalColor: { gradients: true },
+
   },
   // Make it easier to discover a block with keyword aliases.
   // These can be localised so your keywords work across locales.
@@ -798,18 +794,6 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('ole
     },
     customTextColor: {
       type: 'string'
-    },
-    tagName: {
-      type: 'string',
-      default: 'section'
-    },
-    marginTop: {
-      type: 'number',
-      default: 'none'
-    },
-    marginBottom: {
-      type: 'number',
-      default: 'none'
     },
     url: {
       type: 'string'
@@ -1023,10 +1007,7 @@ var Inspector = /*#__PURE__*/function (_Component) {
           fallbackBackgroundColor = _this$props.fallbackBackgroundColor,
           attributes = _this$props.attributes,
           setAttributes = _this$props.setAttributes;
-      var tagName = attributes.tagName,
-          marginTop = attributes.marginTop,
-          marginBottom = attributes.marginBottom,
-          id = attributes.id,
+      var id = attributes.id,
           url = attributes.url,
           backgroundType = attributes.backgroundType,
           focalPoint = attributes.focalPoint,
@@ -1134,42 +1115,6 @@ var Inspector = /*#__PURE__*/function (_Component) {
         backgroundColor: backgroundColor.color,
         fallbackTextColor: fallbackTextColor,
         fallbackBackgroundColor: fallbackBackgroundColor
-      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Layout', 'oleti'),
-        initialOpen: false
-      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('HTML Tag', 'oleti'),
-        value: tagName,
-        onChange: function onChange(value) {
-          return setAttributes({
-            tagName: value
-          });
-        },
-        options: [{
-          value: 'article',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('article', 'oleti')
-        }, {
-          value: 'aside',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('aside', 'oleti')
-        }, {
-          value: 'div',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('div', 'oleti')
-        }, {
-          value: 'footer',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('footer', 'oleti')
-        }, {
-          value: 'header',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('header', 'oleti')
-        }, {
-          value: 'main',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('main', 'oleti')
-        }, {
-          value: 'nav',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('nav', 'oleti')
-        }, {
-          value: 'section',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('section', 'oleti')
-        }]
       }))));
     }
   }]);
@@ -1224,12 +1169,10 @@ function save(_ref) {
       customBackgroundColor = attributes.customBackgroundColor,
       textColor = attributes.textColor,
       customTextColor = attributes.customTextColor,
-      tagName = attributes.tagName,
       url = attributes.url,
       backgroundType = attributes.backgroundType,
       focalPoint = attributes.focalPoint,
       hasParallax = attributes.hasParallax;
-  var CustomTag = "".concat(tagName);
   var backgroundClass = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["getColorClassName"])('background-color', backgroundColor);
   var textClass = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["getColorClassName"])('color', textColor);
   var hasBgOpacity = !!attributes.bgOpacity;
@@ -1244,7 +1187,7 @@ function save(_ref) {
     style.backgroundPosition = "".concat(Math.round(focalPoint.x * 100), "% ").concat(Math.round(focalPoint.y * 100), "%");
   }
 
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(CustomTag, {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", {
     className: classes,
     style: style
   }, _shared__WEBPACK_IMPORTED_MODULE_4__["VIDEO_BACKGROUND_TYPE"] === backgroundType && url && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("video", {
