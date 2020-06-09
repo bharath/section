@@ -10,6 +10,7 @@ import { withSelect } from '@wordpress/data';
 import { compose } from '@wordpress/compose';
 import { Component, Fragment } from '@wordpress/element';
 import { withColors, InnerBlocks } from '@wordpress/block-editor';
+import { __experimentalBoxControl as BoxControl } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -39,7 +40,10 @@ class SectionEdit extends Component {
 			backgroundType,
 			focalPoint,
 			hasParallax,
+			style: styleAttribute,
 		} = attributes;
+
+		const { __Visualizer: BoxControlVisualizer } = BoxControl;
 
 		const CustomTag = `${ tagName }`;
 		const hasPaddingTop = !! attributes.paddingTop;
@@ -88,6 +92,7 @@ class SectionEdit extends Component {
 					className={ classes }
 					style={ style }
 				>
+					<BoxControlVisualizer values={styleAttribute?.padding} />
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img
 							aria-hidden

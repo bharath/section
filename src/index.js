@@ -67,6 +67,7 @@ registerBlockType( 'oleti/section', {
 		html: false,
 		//lightBlockWrapper: true,
 		//__experimentalColor: { gradients: true },
+		"__experimentalPadding": true,
 	},
 
 	// Make it easier to discover a block with keyword aliases.
@@ -100,22 +101,6 @@ registerBlockType( 'oleti/section', {
 		tagName: {
 			type: 'string',
 			default: 'section',
-		},
-		paddingTop: {
-			type: 'string',
-			default: 'none',
-		},
-		paddingBottom: {
-			type: 'string',
-			default: 'none',
-		},
-		paddingLeft: {
-			type: 'string',
-			default: 'none',
-		},
-		paddingRight: {
-			type: 'string',
-			default: 'none',
 		},
 		marginTop: {
 			type: 'number',
