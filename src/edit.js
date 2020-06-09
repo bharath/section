@@ -69,7 +69,7 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<Block.div className="is-placeholder">
+				<Block.div className={classes} data-url={url} style={style}>
 					<BoxControlVisualizer values={styleAttribute?.padding} />
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img

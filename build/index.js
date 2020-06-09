@@ -617,7 +617,9 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
       }
 
       return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["Fragment"], null, isSelected && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_inspector__WEBPACK_IMPORTED_MODULE_12__["default"], this.props), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_10__["__experimentalBlock"].div, {
-        className: "is-placeholder"
+        className: classes,
+        "data-url": url,
+        style: style
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(BoxControlVisualizer, {
         values: styleAttribute === null || styleAttribute === void 0 ? void 0 : styleAttribute.padding
       }), _shared__WEBPACK_IMPORTED_MODULE_13__["IMAGE_BACKGROUND_TYPE"] === backgroundType && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("img", {
