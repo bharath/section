@@ -13,7 +13,6 @@ import {
 	MediaReplaceFlow,
 	MediaUpload,
 	MediaUploadCheck,
-	__experimentalBlockAlignmentMatrixToolbar as BlockAlignmentMatrixToolbar,
 } from '@wordpress/block-editor';
 
 import {
@@ -34,7 +33,6 @@ import {
 	attributesFromMedia,
 	IMAGE_BACKGROUND_TYPE,
 	VIDEO_BACKGROUND_TYPE,
-	isContentPositionCenter,
 } from './shared';
 
 const ALLOWED_MEDIA_TYPES = [ 'image', 'video' ];
@@ -77,7 +75,6 @@ class Inspector extends Component {
 			focalPoint,
 			hasParallax,
 			bgOpacity,
-			contentPosition,
 		} = attributes;
 
 		const onSelectMedia = attributesFromMedia( setAttributes );
@@ -92,13 +89,6 @@ class Inspector extends Component {
 		return (
 			<Fragment>
 				<BlockControls>
-					<BlockAlignmentMatrixToolbar
-						label={ __( 'Change content position' ) }
-						value={ contentPosition }
-						onChange={ ( nextPosition ) =>
-							setAttributes( { contentPosition: nextPosition } )
-						}
-					/>
 					{ !! url && (
 						<MediaReplaceFlow
 							mediaId={ id }

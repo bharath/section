@@ -16,7 +16,7 @@
 
 ## Requirements
 
-Tested with 5.5-alpha-47929 and  8.3.0 version of [Gutenberg](https://github.com/WordPress/gutenberg) plugin.
+Tested with 5.4-RC2-47447 and 7.7.1 version of [Gutenberg](https://github.com/WordPress/gutenberg) plugin.
 
 ## Bugs
 
