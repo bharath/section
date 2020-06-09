@@ -607,17 +607,11 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
           styleAttribute = attributes.style;
       var BoxControlVisualizer = _wordpress_components__WEBPACK_IMPORTED_MODULE_11__["__experimentalBoxControl"].__Visualizer;
       var CustomTag = "".concat(tagName);
-      var hasPaddingTop = !!attributes.paddingTop;
-      var hasPaddingRight = !!attributes.paddingRight;
-      var hasPaddingBottom = !!attributes.paddingBottom;
-      var hasPaddingLeft = !!attributes.paddingLeft;
-      var hasMarginTop = !!attributes.marginTop;
-      var hasMarginBottom = !!attributes.marginBottom;
       var hasBgOpacity = !!attributes.bgOpacity;
       var classes = classnames__WEBPACK_IMPORTED_MODULE_7___default()(className, (_classnames = {
         'has-background': backgroundColor.color,
         'has-text-color': textColor.color
-      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, backgroundColor.class, backgroundColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, textColor.class, textColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-top-".concat(attributes.paddingTop), hasPaddingTop), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-right-".concat(attributes.paddingRight), hasPaddingRight), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-bottom-".concat(attributes.paddingBottom), hasPaddingBottom), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-left-".concat(attributes.paddingLeft), hasPaddingLeft), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "margin-top-".concat(attributes.marginTop), hasMarginTop), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "margin-bottom-".concat(attributes.marginBottom), hasMarginBottom), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-parallax', hasParallax), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "has-background-overlay-".concat(attributes.bgOpacity), hasBgOpacity), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-background-overlay', hasBgOpacity), _classnames));
+      }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, backgroundColor.class, backgroundColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, textColor.class, textColor.class), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-parallax', hasParallax), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "has-background-overlay-".concat(attributes.bgOpacity), hasBgOpacity), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-background-overlay', hasBgOpacity), _classnames));
       var style = backgroundType === _shared__WEBPACK_IMPORTED_MODULE_13__["IMAGE_BACKGROUND_TYPE"] ? Object(_shared__WEBPACK_IMPORTED_MODULE_13__["backgroundImageStyles"])(url) : {};
 
       if (focalPoint && !hasParallax) {
@@ -1030,10 +1024,6 @@ var Inspector = /*#__PURE__*/function (_Component) {
           attributes = _this$props.attributes,
           setAttributes = _this$props.setAttributes;
       var tagName = attributes.tagName,
-          paddingTop = attributes.paddingTop,
-          paddingRight = attributes.paddingRight,
-          paddingBottom = attributes.paddingBottom,
-          paddingLeft = attributes.paddingLeft,
           marginTop = attributes.marginTop,
           marginBottom = attributes.marginBottom,
           id = attributes.id,
@@ -1145,189 +1135,6 @@ var Inspector = /*#__PURE__*/function (_Component) {
         fallbackTextColor: fallbackTextColor,
         fallbackBackgroundColor: fallbackBackgroundColor
       })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["PanelBody"], {
-        title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Spacing', 'oleti'),
-        initialOpen: false
-      }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Padding Top', 'oleti'),
-        value: paddingTop,
-        onChange: function onChange(newPaddingTop) {
-          return setAttributes({
-            paddingTop: newPaddingTop
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Padding Right', 'oleti'),
-        value: paddingRight,
-        onChange: function onChange(newPaddingRight) {
-          return setAttributes({
-            paddingRight: newPaddingRight
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Padding Bottom', 'oleti'),
-        value: paddingBottom,
-        onChange: function onChange(newPaddingBottom) {
-          return setAttributes({
-            paddingBottom: newPaddingBottom
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Padding Left', 'oleti'),
-        value: paddingLeft,
-        onChange: function onChange(newPaddingLeft) {
-          return setAttributes({
-            paddingLeft: newPaddingLeft
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Margin Top', 'oleti'),
-        value: marginTop,
-        onChange: function onChange(newMarginTop) {
-          return setAttributes({
-            marginTop: newMarginTop
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Margin Bottom', 'oleti'),
-        value: marginBottom,
-        onChange: function onChange(newMarginBottom) {
-          return setAttributes({
-            marginBottom: newMarginBottom
-          });
-        },
-        options: [{
-          value: 'none',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('None', 'oleti')
-        }, {
-          value: 'extra-small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Small', 'oleti')
-        }, {
-          value: 'small',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Small', 'oleti')
-        }, {
-          value: 'normal',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Normal', 'oleti')
-        }, {
-          value: 'medium',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Medium', 'oleti')
-        }, {
-          value: 'large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Large', 'oleti')
-        }, {
-          value: 'extra-large',
-          label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Extra Large', 'oleti')
-        }]
-      })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["PanelBody"], {
         title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_7__["__"])('Layout', 'oleti'),
         initialOpen: false
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_10__["SelectControl"], {
@@ -1425,17 +1232,12 @@ function save(_ref) {
   var CustomTag = "".concat(tagName);
   var backgroundClass = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["getColorClassName"])('background-color', backgroundColor);
   var textClass = Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["getColorClassName"])('color', textColor);
-  var hasPaddingTop = !!attributes.paddingTop;
-  var hasPaddingRight = !!attributes.paddingRight;
-  var hasPaddingBottom = !!attributes.paddingBottom;
-  var hasPaddingLeft = !!attributes.paddingLeft;
-  var hasMarginTop = !!attributes.marginTop;
-  var hasMarginBottom = !!attributes.marginBottom;
   var hasBgOpacity = !!attributes.bgOpacity;
   var classes = classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, backgroundClass, textClass, (_classnames = {
     'has-text-color': textColor || customTextColor,
-    'has-background': backgroundColor || customBackgroundColor
-  }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-top-".concat(attributes.paddingTop), hasPaddingTop), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-right-".concat(attributes.paddingRight), hasPaddingRight), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-bottom-".concat(attributes.paddingBottom), hasPaddingBottom), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "padding-left-".concat(attributes.paddingLeft), hasPaddingLeft), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "margin-top-".concat(attributes.marginTop), hasMarginTop), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "margin-bottom-".concat(attributes.marginBottom), hasMarginBottom), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-parallax', hasParallax), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "has-background-overlay-".concat(attributes.bgOpacity), hasBgOpacity), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-background-overlay', hasBgOpacity), _classnames));
+    'has-background': backgroundColor || customBackgroundColor,
+    'has-parallax': hasParallax
+  }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, "has-background-overlay-".concat(attributes.bgOpacity), hasBgOpacity), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_classnames, 'has-background-overlay', hasBgOpacity), _classnames));
   var style = backgroundType === _shared__WEBPACK_IMPORTED_MODULE_4__["IMAGE_BACKGROUND_TYPE"] ? Object(_shared__WEBPACK_IMPORTED_MODULE_4__["backgroundImageStyles"])(url) : {};
 
   if (focalPoint && !hasParallax) {

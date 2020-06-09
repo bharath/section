@@ -35,27 +35,11 @@ export default function save( { className, attributes } ) {
 	);
 
 	const textClass = getColorClassName( 'color', textColor );
-	const hasPaddingTop = !! attributes.paddingTop;
-	const hasPaddingRight = !! attributes.paddingRight;
-	const hasPaddingBottom = !! attributes.paddingBottom;
-	const hasPaddingLeft = !! attributes.paddingLeft;
-	const hasMarginTop = !! attributes.marginTop;
-	const hasMarginBottom = !! attributes.marginBottom;
 	const hasBgOpacity = !! attributes.bgOpacity;
 
 	const classes = classnames( className, backgroundClass, textClass, {
 		'has-text-color': textColor || customTextColor,
 		'has-background': backgroundColor || customBackgroundColor,
-		//'has-padding-top': hasPaddingTop,
-		//'has-padding-bottom': hasPaddingBottom,
-		//'has-margin-top': hasMarginTop,
-		//'has-margin-bottom': hasMarginBottom,
-		[ `padding-top-${ attributes.paddingTop }` ]: hasPaddingTop,
-		[ `padding-right-${ attributes.paddingRight }` ]: hasPaddingRight,
-		[ `padding-bottom-${ attributes.paddingBottom }` ]: hasPaddingBottom,
-		[ `padding-left-${ attributes.paddingLeft }` ]: hasPaddingLeft,
-		[ `margin-top-${ attributes.marginTop }` ]: hasMarginTop,
-		[ `margin-bottom-${ attributes.marginBottom }` ]: hasMarginBottom,
 		'has-parallax': hasParallax,
 		[ `has-background-overlay-${ attributes.bgOpacity }` ]: hasBgOpacity,
 		'has-background-overlay': hasBgOpacity,
