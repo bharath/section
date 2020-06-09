@@ -9,7 +9,11 @@ import classnames from 'classnames';
 import { withSelect } from '@wordpress/data';
 import { compose } from '@wordpress/compose';
 import { Component, Fragment } from '@wordpress/element';
-import { withColors, InnerBlocks, __experimentalBlock as Block } from '@wordpress/block-editor';
+import {
+	withColors,
+	InnerBlocks,
+	__experimentalBlock as Block,
+} from '@wordpress/block-editor';
 import { __experimentalBoxControl as BoxControl } from '@wordpress/components';
 
 /**
@@ -69,8 +73,12 @@ class SectionEdit extends Component {
 		return (
 			<Fragment>
 				{ isSelected && <Inspector { ...this.props } /> }
-				<Block.div className={classes} data-url={url} style={style}>
-					<BoxControlVisualizer values={styleAttribute?.padding} />
+				<Block.div
+					className={ classes }
+					data-url={ url }
+					style={ style }
+				>
+					<BoxControlVisualizer values={ styleAttribute?.padding } />
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
 						<img
 							aria-hidden
