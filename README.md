@@ -12,7 +12,6 @@
 - Text Color
 - Background Video
 - Spacing options
-- HTML Tag options
 - Simple Patterns added to Patterns sidebar
 
 ## Requirements
