@@ -53,7 +53,7 @@ export default function save( { className, attributes } ) {
 	}
 
 	return (
-		<div className={classes} style={style}>
+		<div className={ classes } style={ style }>
 			{ VIDEO_BACKGROUND_TYPE === backgroundType && url && (
 				<video
 					className="wp-block-oleti-section__video-background"
