@@ -5,168 +5,6 @@
 * Replace them with your own styles or remove the file completely.
 */
 
-/* -- Extra Small Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-extra-small {
-	padding-top: 15px;
-}
-
-.wp-block-oleti-section.padding-right-extra-small {
-	padding-right: 15px;
-}
-
-.wp-block-oleti-section.padding-bottom-extra-small {
-	padding-bottom: 15px;
-}
-
-.wp-block-oleti-section.padding-left-extra-small {
-	padding-left: 15px;
-}
-
-.wp-block-oleti-section.margin-top-extra-small {
-	margin-top: 15px;
-}
-
-.wp-block-oleti-section.margin-bottom-extra-small {
-	margin-bottom: 15px;
-}
-
-/* -- Small Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-small {
-	padding-top: 30px;
-}
-
-.wp-block-oleti-section.padding-right-small {
-	padding-right: 30px;
-}
-
-.wp-block-oleti-section.padding-bottom-small {
-	padding-bottom: 30px;
-}
-
-.wp-block-oleti-section.padding-left-small {
-	padding-left: 30px;
-}
-
-.wp-block-oleti-section.margin-top-small {
-	margin-top: 30px;
-}
-
-.wp-block-oleti-section.margin-bottom-small {
-	margin-bottom: 30px;
-}
-
-/* -- Normal Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-normal {
-	padding-top: 45px;
-}
-
-.wp-block-oleti-section.padding-right-normal {
-	padding-right: 45px;
-}
-
-.wp-block-oleti-section.padding-bottom-normal {
-	padding-bottom: 45px;
-}
-
-.wp-block-oleti-section.padding-left-normal {
-	padding-left: 45px;
-}
-
-.wp-block-oleti-section.margin-top-normal {
-	margin-top: 45px;
-}
-
-.wp-block-oleti-section.margin-bottom-normal {
-	margin-bottom: 45px;
-}
-
-/* -- Medium Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-medium {
-	padding-top: 60px;
-}
-
-.wp-block-oleti-section.padding-right-medium {
-	padding-right: 60px;
-}
-
-.wp-block-oleti-section.padding-bottom-medium {
-	padding-bottom: 60px;
-}
-
-.wp-block-oleti-section.padding-left-medium {
-	padding-left: 60px;
-}
-
-.wp-block-oleti-section.margin-top-medium {
-	margin-top: 60px;
-}
-
-.wp-block-oleti-section.margin-bottom-medium {
-	margin-bottom: 60px;
-}
-
-/* -- Large Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-large {
-	padding-top: 75px;
-}
-
-.wp-block-oleti-section.padding-right-large {
-	padding-right: 75px;
-}
-
-.wp-block-oleti-section.padding-bottom-large {
-	padding-bottom: 75px;
-}
-
-.wp-block-oleti-section.padding-left-large {
-	padding-left: 75px;
-}
-
-.wp-block-oleti-section.margin-top-large {
-	margin-top: 75px;
-}
-
-.wp-block-oleti-section.margin-bottom-large {
-	margin-bottom: 75px;
-}
-
-/* -- Extra Large Spacing
---------------------------------------------- */
-
-.wp-block-oleti-section.padding-top-extra-large {
-	padding-top: 100px;
-}
-
-.wp-block-oleti-section.padding-right-extra-large {
-	padding-right: 100px;
-}
-
-.wp-block-oleti-section.padding-bottom-extra-large {
-	padding-bottom: 100px;
-}
-
-.wp-block-oleti-section.padding-left-extra-large {
-	padding-left: 100px;
-}
-
-.wp-block-oleti-section.margin-top-extra-large {
-	margin-top: 100px;
-}
-
-.wp-block-oleti-section.margin-bottom-extra-large {
-	margin-bottom: 100px;
-}
-
 /* -- Background Overlay
 --------------------------------------------- */
 
@@ -186,6 +24,7 @@
 	position: relative;
 	background-size: cover;
 	background-position: 50%;
+	display: flex;
 }
 
 .wp-block-oleti-section.has-parallax {
@@ -292,4 +131,67 @@
 	height: 100%;
 	z-index: 0;
 	object-fit: cover;
+}
+
+/* -- 	BlockAlignmentMatrixToolbar
+--------------------------------------------- */
+
+.wp-block-oleti-section-image.is-position-top-left,
+.wp-block-oleti-section.is-position-top-left {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.wp-block-oleti-section-image.is-position-top-center,
+.wp-block-oleti-section.is-position-top-center {
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.wp-block-oleti-section-image.is-position-top-right,
+.wp-block-oleti-section.is-position-top-right {
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.wp-block-oleti-section-image.is-position-center-left,
+.wp-block-oleti-section.is-position-center-left {
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.wp-block-oleti-section-image.is-position-center-center,
+.wp-block-oleti-section.is-position-center-center {
+	align-items: center;
+	justify-content: center;
+}
+
+.wp-block-oleti-section-image.is-position-center-right,
+.wp-block-oleti-section.is-position-center-right {
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.wp-block-oleti-section-image.is-position-bottom-left,
+.wp-block-oleti-section.is-position-bottom-left {
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+
+.wp-block-oleti-section-image.is-position-bottom-center,
+.wp-block-oleti-section.is-position-bottom-center {
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.wp-block-oleti-section-image.is-position-bottom-right,
+.wp-block-oleti-section.is-position-bottom-right {
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.wp-block-oleti-section-image.has-custom-content-position.has-custom-content-position .wp-block-oleti-section__inner-container,
+.wp-block-oleti-section.has-custom-content-position.has-custom-content-position .wp-block-oleti-section__inner-container {
+	margin: 0;
+	width: auto;
 }
