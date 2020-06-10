@@ -112,14 +112,17 @@ class SectionEdit extends Component {
 							src={ url }
 						/>
 					) }
-					<div className="wp-block-oleti-section__inner-container">
-						<InnerBlocks
-							renderAppender={
-								! hasInnerBlocks &&
-								InnerBlocks.ButtonBlockAppender
-							}
-						/>
-					</div>
+					<InnerBlocks
+						renderAppender={
+							hasInnerBlocks
+								? undefined
+								: () => <InnerBlocks.ButtonBlockAppender />
+						}
+						__experimentalTagName="div"
+						__experimentalPassedProps={{
+							className: 'wp-block-oleti-section__inner-container',
+						}}
+					/>
 				</Block.div>
 			</Fragment>
 		);
