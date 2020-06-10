@@ -5,7 +5,7 @@
  */
 
 .wp-block-oleti-section {
-	display: flex;
+	display: block;
 }
 
 /* Structure --------------------------------- */
