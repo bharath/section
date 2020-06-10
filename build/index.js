@@ -590,7 +590,7 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(SectionEdit, [{
     key: "render",
     value: function render() {
-      var _classnames;
+      var _classnames, _styleAttribute$spaci, _styleAttribute$visua;
 
       var _this$props = this.props,
           attributes = _this$props.attributes,
@@ -622,7 +622,8 @@ var SectionEdit = /*#__PURE__*/function (_Component) {
         "data-url": url,
         style: style
       }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])(BoxControlVisualizer, {
-        values: styleAttribute === null || styleAttribute === void 0 ? void 0 : styleAttribute.padding
+        values: styleAttribute === null || styleAttribute === void 0 ? void 0 : (_styleAttribute$spaci = styleAttribute.spacing) === null || _styleAttribute$spaci === void 0 ? void 0 : _styleAttribute$spaci.padding,
+        showValues: styleAttribute === null || styleAttribute === void 0 ? void 0 : (_styleAttribute$visua = styleAttribute.visualizers) === null || _styleAttribute$visua === void 0 ? void 0 : _styleAttribute$visua.padding
       }), _shared__WEBPACK_IMPORTED_MODULE_13__["IMAGE_BACKGROUND_TYPE"] === backgroundType && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_6__["createElement"])("img", {
         "aria-hidden": true,
         alt: "",
