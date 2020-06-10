@@ -88,10 +88,9 @@ class SectionEdit extends Component {
 					data-url={ url }
 					style={ style }
 				>
-
 					<BoxControlVisualizer
-						values={styleAttribute?.spacing?.padding}
-						showValues={styleAttribute?.visualizers?.padding}
+						values={ styleAttribute?.spacing?.padding }
+						showValues={ styleAttribute?.visualizers?.padding }
 					/>
 
 					{ IMAGE_BACKGROUND_TYPE === backgroundType && (
