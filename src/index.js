@@ -122,6 +122,10 @@ registerBlockType( 'oleti/section', {
 		contentPosition: {
 			type: 'string',
 		},
+		tagName: {
+			type: 'string',
+			default: 'div',
+		},
 	},
 
 	example: {
