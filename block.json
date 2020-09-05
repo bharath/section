@@ -1,0 +1,71 @@
+{
+	"name": "oleti/section",
+	"title": "Section",
+	"category": "layout",
+	//"icon": "smiley",
+	"description": "A Gutenbeg block that allows you to add other blocks inside.",
+	"textdomain": "section",
+	"attributes": {
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"align": {
+			"type": "string"
+			//default: 'wide',
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"customBackgroundColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"id": {
+			"type": "number"
+		},
+		"hasParallax": {
+			"type": "boolean",
+			"default": false
+		},
+		"backgroundType": {
+			"type": "string",
+			"default": "image"
+		},
+		"focalPoint": {
+			"type": "object"
+		},
+		"bgOpacity": {
+			"type": "number",
+			"default": 50
+		},
+		"contentPosition": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"anchor": true,
+		"html": false,
+		"lightBlockWrapper": true,
+		"__experimentalColor": {
+			"gradients": true,
+			"linkColor": true
+		},
+		"__experimentalPadding": true
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
