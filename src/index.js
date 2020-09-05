@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-import { registerBlockType, createBlock } from '@wordpress/blocks';
+import { registerBlockType } from '@wordpress/blocks';
 
 /**
  * Retrieves the translation of text.
@@ -11,6 +11,15 @@ import { registerBlockType, createBlock } from '@wordpress/blocks';
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * All files containing `style` keyword are bundled together. The code used
+ * gets applied both to the front of your site and to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+import './style.scss';
 
 /**
  * Internal dependencies
@@ -79,50 +88,6 @@ registerBlockType( 'oleti/section', {
 		__( 'row', 'oleti' ),
 		__( 'wrapper', 'oleti' ),
 	],
-
-	// Specifying block attributes
-	attributes: {
-		align: {
-			type: 'string',
-			//default: 'wide',
-		},
-		backgroundColor: {
-			type: 'string',
-		},
-		textColor: {
-			type: 'string',
-		},
-		customBackgroundColor: {
-			type: 'string',
-		},
-		customTextColor: {
-			type: 'string',
-		},
-		url: {
-			type: 'string',
-		},
-		id: {
-			type: 'number',
-		},
-		hasParallax: {
-			type: 'boolean',
-			default: false,
-		},
-		backgroundType: {
-			type: 'string',
-			default: 'image',
-		},
-		focalPoint: {
-			type: 'object',
-		},
-		bgOpacity: {
-			type: 'number',
-			default: 50,
-		},
-		contentPosition: {
-			type: 'string',
-		},
-	},
 
 	example: {
 		attributes: {

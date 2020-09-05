@@ -5,6 +5,7 @@
  * Version:         0.1.0
  * Author:          Bharath
  * License:         GPL-2.0-or-later
+ * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     oleti
  *
  * Plugin URI:      https://github.com/bharath/section
@@ -43,7 +44,7 @@ function oleti_section_block_init() {
 		plugin_dir_path( __FILE__ ) . 'languages'
 	);
 
-	$editor_css = 'editor.css';
+	$editor_css = 'build/index.css';
 	wp_register_style(
 		'oleti-section-block-editor',
 		plugins_url( $editor_css, __FILE__ ),
@@ -51,7 +52,7 @@ function oleti_section_block_init() {
 		filemtime( "$dir/$editor_css" )
 	);
 
-	$style_css = 'style.css';
+	$style_css = 'build/style-index.css';
 	wp_register_style(
 		'oleti-section-block',
 		plugins_url( $style_css, __FILE__ ),
